@@ -13,7 +13,7 @@ export default class Comment extends React.Component{
     render() {
 
         return (
-            <div className="Comments">
+            <div className="comments">
                 <h2 className="commentAuthor">
                     {this.props.author}
                 </h2>
