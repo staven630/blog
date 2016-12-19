@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<script type="text/javascript" src="js/iscroll-probe.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<link rel="stylesheet" href="css/loading.css" />
+		<style>
+			.top {
+				top: 0;
+			}
+			
+			.footer {
+				bottom: 0;
+			}
+			
+			.top,
+			.footer {
+				position: fixed;
+				left: 0;
+				text-align: center;
+				line-height: 50px;
+				height: 50px;
+				width: 100%;
+				background-color: #0dcecb;
+				color: #fff;
+				z-index: 100;
+			}
+			
+			#wrapper {
+				position: absolute;
+				left: 0;
+				top: 50px;
+				bottom: 50px;
+				width: 100%;
+				background-color: #fafafa;
+				z-index: 10;
+			}
+			
+			.news-lists .item {
+				height: 40px;
+				line-height: 40px;
+				border-bottom: 1px solid #CFCFCF;
+			}
+			
+			.news-lists {
+				position: relative;
+			}
+			
+			
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="top">
+			页面导航
+		</div>
+
+		<div id="wrapper">
+			<div id="scroller">
+				
+				<div class="news-lists" id="news-lists">
+					<div class="item">1</div>
+					<div class="item">2</div>
+					<div class="item">3</div>
+					<div class="item">4</div>
+					<div class="item">5</div>
+					<div class="item">6</div>
+					<div class="item">7</div>
+					<div class="item">8</div>
+					<div class="item">9</div>
+					<div class="item">10</div>
+					<div class="item">11</div>
+				</div>
+				<div id="pullUp">
+					<div class="pullUpIcon">
+						<div class="loader">
+							<div class="inner one"></div>
+							<div class="inner two"></div>
+							<div class="inner three"></div>
+						</div>
+					</div>
+					<div class="pullUpLabel"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			底部导航
+		</div>
+	</body>
+	<script src="js/scrollUpdate.js"></script>
+	<script>
+		
+
+		
+
+		var pullUpAction = function() {
+
+			$.getJSON('./test.json', function(data, state) {
+				if(data && data.state == 1 && state == 'success') {
+					$("#news-lists").append('<div class="item">'+ data.data +'---'+ Date.now() +'</div>');
+				}
+			});
+		}
+		
+		$("#wrapper").scrollUpdate({
+			id: "#wrapper", //iScroll初始化id，默认#wrapper
+			pullUpAction: pullUpAction, //上拉事件
+			pullUpEle: "#pullUp", //提示元素， 默认#pullUp
+			pullUpLabel: ".pullUpLabel"
+
+		});
+
+		
+	</script>
+
+</html>
