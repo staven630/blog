@@ -3,6 +3,7 @@
 		var id = scrollObject.id || '#wrapper',
 			pullUpEle = scrollObject.pullUpEle || "#pullUp",
 			pullUpLabel = scrollObject.pullUpLabel || ".pullUpLabel",
+			tipInfo = scrollObject.tipInfo || "加载更多...",
 			show_gotop = function() {};
 		if(scrollObject.goTopEle && scrollObject.getClientRectEle) {
 			show_gotop = function() {
@@ -51,7 +52,7 @@
 						pullUpEle.show();
 						myScroll.refresh();
 						pullUpEle.addClass('flip');
-						pullUpLabel.html('加载更多...');
+						pullUpLabel.html(tipInfo);
 						loadingStep = 1;
 					}
 				}
@@ -67,7 +68,7 @@
 						setTimeout(function() {
 							pullUpAction();
 							pullUpEle.removeClass('loading');
-							pullUpLabel.html('加载更多...');
+							pullUpLabel.html(tipInfo);
 							pullUpEle['class'] = pullUpEle.attr('class');
 							pullUpEle.attr('class', '').hide();
 							myScroll.refresh();
@@ -95,6 +96,7 @@
 //	pullUpAction: pullUpAction, //上拉事件
 //	pullUpEle: "#pullUp", //提示元素， 默认#pullUp
 //	pullUpLabel: ".pullUpLabel", //提示信息元素， 默认#pullUp
+//	tipInfo: '加载更多...',   //提示信息    
 //	getClientRectEle: "#scroller", //getBoundingClientRect作用的元素
 //	goTopEle: ".go_top" //返回首页
 //});
