@@ -1,0 +1,51 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "strict": [2, "global"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "$": true,
+    "window": true,
+    "document": true,
+    "__dirname": true
+  },
+  "rules": {
+    "func-names": 0,
+    "no-new": 0,
+    "no-new-func": 1,
+    "no-extra-semi": 0,
+    "no-param-reassign": [2, { "props": false }],
+    "yoda": [1, "never", {"exceptRange": true,"onlyEquality": true}],
+    "no-useless-concat": 0,
+    "no-implicit-coercion": [2, {
+      "boolean": true,
+      "number": true,
+      "string": true,
+      "allow": [/* "!!", "~", "*", "+" */]
+    }],
+    "semi": 2,
+    "quotes": 0,
+    "indent": 0,
+    "comma-dangle": [2, "never"],
+    "eol-last": 0,
+    "padded-blocks": 0,
+    "no-console": 0,
+    "dot-notation": 0,
+    "block-spacing": 0,
+    "brace-style": 0,
+    "object-shorthand": 0,
+    "no-multi-spaces": 0,
+    "space-in-parens": 0,
+    "space-before-blocks": 0,
+    "object-curly-spacing": 0
+  }
+}
