@@ -91,7 +91,7 @@
 
 			$(".go_top").on('tap', function() {
 				if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-				    $('body').scrollTop(0);
+				    myScroll.scrollTo(0, 0);
 				} 
 				myScroll.scrollTo(0, 0, 1000, IScroll.utils.ease.circular);
 			});
