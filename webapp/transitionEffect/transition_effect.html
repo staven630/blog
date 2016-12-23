@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<title>webapp 转场效果</title>
+		<link rel="stylesheet" href="css/LArea.css" />
+		<link rel="stylesheet" href="css/swiper.min.css" />
+	</head>
+
+	<body>
+		<div class="swiper-body swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="circle-input manage-type clearfix">
+						<span class="cir-tit">圈子类别</span>
+						<input type="text" readonly class="cir-input-sty manage-type-sty" value="制动系统">
+						<span class="input-arrow"></span>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="manage-select-type">
+						<div class="header-fixed">
+							<div class="mach-header">
+								<a href="javascript:void(0)" class="right-close"></a>
+							</div>
+						</div>
+						<div class="cir-type">
+							<ul>
+								<li class="on">动力系统</li>
+								<li>传动系统</li>
+								<li>制动系统</li>
+								<li>电器系统</li>
+								<li>液压系统</li>
+								<li>驾驶室和覆盖件系统 </li>
+								<li>车架和工作装置系统</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/zepto.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/LArea.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-body', {
+				speed: 500,
+				paginationType: 'custom',
+				onlyExternal: true,
+				onSlideChangeStart: function(swiper) {
+					$('body').scrollTop(0);
+				}
+			});
+			$(function() {
+				function tapHandle(tag, fn){
+					$(document).on('click', tag, fn);
+				}
+				tapHandle('.manage-type-sty', function(e) {
+					e.preventDefault();
+					$(".swiper-wrapper").removeAttr('style');
+					var v = $(this).val();
+					$('.cir-type li').removeClass('on');
+					$('.cir-type li').each(function() {
+						if(v === $(this).text()) {
+							$(this).addClass('on');
+						}
+					})
+					mySwiper.slideNext();
+				});
+				tapHandle('.cir-type li',function() {
+					$('.manage-type-sty').val($(this).text());
+					mySwiper.slidePrev();
+				});
+
+			
+
+			});
+
+			
+		</script>
+	</body>
+
+</html>
