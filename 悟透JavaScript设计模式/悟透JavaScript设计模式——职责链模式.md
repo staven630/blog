@@ -16,6 +16,7 @@ Person.prototype = {
 	action: function() {
 		return this;
 	},
+	//设置当前候选执行者的下一个候选执行者
 	setNext: function(person) {
 		this.next = person;
 		return person;
