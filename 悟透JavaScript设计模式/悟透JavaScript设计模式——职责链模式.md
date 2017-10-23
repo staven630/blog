@@ -7,7 +7,7 @@
 var Person = function(name, skill) {
 	this.name = name;
 	this.skill = skill;
-	this.next = {};	//下一个候选执行者
+	this.next = null;	//下一个候选执行者
 };
 
 Person.prototype = {
