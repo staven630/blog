@@ -61,3 +61,7 @@ console.log(b);  //"4,2,3"
 ```
 
 &emsp;&emsp;因为js没有块级作用域，所以它在change里找不到变量a，b就会自觉的到上层去找，所以这里的a，b是全局变量的引用。
+
+***
+[☞☞☞深究JavaScript系列☜☜☜](https://github.com/staven630/blog/tree/master/%E6%B7%B1%E7%A9%B6JavaScript)
+***

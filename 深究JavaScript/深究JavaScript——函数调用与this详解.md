@@ -111,3 +111,7 @@ var obj2 = {
 console.log(obj1.getName());        //jsor
 console.log(obj1.getName.call(obj2));   //staven
 ```
+
+***
+[☞☞☞深究JavaScript系列☜☜☜](https://github.com/staven630/blog/tree/master/%E6%B7%B1%E7%A9%B6JavaScript)
+***
