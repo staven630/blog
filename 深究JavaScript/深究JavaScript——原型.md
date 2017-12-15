@@ -1,28 +1,47 @@
-### prototype、constructor、[[Prototype]]
-&emsp;&emsp;创建每个函数都有一个ptototype属性，这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。
-
+### prototype、constructor、__proto__
+&emsp;&emsp;prototype是站在构造函数的角度讨论原型对象的，用来实现基于原型的继承与属性的共享。__proto__是站在对象的角度讨论原型对象，构成原型链，同样用于实现基于原型的继承。
 ```
 function Person(){}
-Person.prototype.name = "staven";
-Person.prototype.say = function(){
-	console.log("My name is "+this.name);
-}
 var p = new Person();
-p.say();  //My name is staven
-var p1 = new Person();
-console.log(p.say == p1.say);  //true
 ```
-&emsp;&emsp;只要创建了一个函数，函数就会创建一个prototype属性指向函数的原型对象。原型对象可以让所有对象实例共享它所包含的属性和方法。
+> Person.prototype
 
-&emsp;&emsp;所有原型对象都会自动获得一个constructor（构造函数）属性，这个属性包含一个指向prototype属性所在函数的指针。通过这个constructor（构造函数），还可以继续为原型对象添加其他属性和方法。
+![Person.prototype](https://segmentfault.com/img/bV0n5e?w=391&h=408)
 
-&emsp;&emsp;通过构造函数创建的实例内部都包含一个指针[[Prototype]]，仅仅指向了prototype，这个连接存在于实例与构造函数的原型对象(而不是构造函数)之间，也就是说实例对象与构造函数没有直接关系。并且，实例并不包含属性与方法，实例之所以能够调用原型上的方法，是依赖于查找对象属性的过程来实现的。
+> Person.constructor
 
-&emsp;&emsp;虽然无法访问到[[Prototype]]，可以通过isPrototypeOf()方法来确定对象之间是否存在这种关系，如果[[Prototype]]指向调用该方法的对象的prototype，返回true。
+![Person.constructor](https://segmentfault.com/img/bV0n5n?w=289&h=40)
+
+> p.prototype
+
+![p.prototype](https://segmentfault.com/img/bV0n5v?w=178&h=35)
+
+> p.constructor
+
+![p.constructor](https://segmentfault.com/img/bV0n8b)
+
+> p.__proto__
+
+![p.__proto__](https://segmentfault.com/img/bV0n7y)
+
+
+* 通过new构造函数实例化得到对象。
+* prototype是构造函数的属性，而不是实例对象的属性，指向Person.prototype原型对象。
+* 实例对象含有一个Constructor属性指向该对象的构造器。
+* p对象有个__proto__内部属性指向Person.prototype。 
+* p.__proto__、p.constructor.prototype、Person.prototype指向Person的原型对象
+
+
+&emsp;&emsp;每个构造函数都有一个phototype属性(通过Function.prototype.bind方法构造出来的函数以及Object.create(null)例外，没有prototype属性)，这个属性是一个指针，指向一个包含特定类型的所有实例共享属性和方法的对象。通过prototype对象可以返回对象的原型对象的引用。
+
+&emsp;&emsp;每个实例对象都有一个constructor属性指向prototype属性所在函数的指针。通过这个constructor（构造函数），还可以继续为原型对象添加其他属性和方法。  
+
+&emsp;&emsp;每个实例对象都有一个内部属性[[prototype]]，在ES5之前没有标准的方法访问这个内置属性，但是大多数浏览器都支持通过__proto__指针来访问。__proto__指向实例该对象的构造器的原型对象(Object.prototype 这个对象是个例外，它的__proto__值为null)。这个连接存在于实例与构造函数的原型对象(而不是构造函数)之间，也就是说实例对象与构造函数没有直接关系。并且，实例并不包含属性与方法，实例之所以能够调用原型上的方法，是依赖于查找对象属性的过程来实现的。虽然无法访问到__proto__，可以通过isPrototypeOf()方法来确定对象之间是否存在这种关系，如果__proto__指向调用该方法的对象的prototype，返回true。      
 ```
 console.log(Person.prototype.isPrototypeOf(p)); //true;
 ```
-![原型解构图](http://img.blog.csdn.net/20170308230430956?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3RhdmVuY3Nkbg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![原型解构图](https://segmentfault.com/img/bV0n4I)
+
 &emsp;&emsp;每当代码读取某个对象属性时，首先从对象实例开始，如果找到给定名字属性，返回该值；如果没有找到，继续搜索指针指向的原型对象。虽然能通过实例访问原型中的值，但不能通过对象实例重写原型中的值。
 
 &emsp;&emsp;当为对象实例添加一个属性时，这个属性就会屏蔽原型对象中保存的同名属性；换句话说，添加这个属性只会阻止我们访问原型中的那个属性，但不会修改那个属性。即使将这个属性设置为 null，也只会在实例中设置这个属性，而不会恢复其指向原型的连接。不过，使用 delete 操作符则可以完全删除实例属性，从而让我们能够重新访问原型中的属性。
@@ -40,7 +59,9 @@ p.say();  //My name is staven
 ```
 &emsp;&emsp;使用 hasOwnProperty()方法只在给定属性存在于对象实例中时，才会返回 true；可以检测一个属性是存在于实例中，还是存在于原型中。
 
-&emsp;&emsp; for(x in xxx)既可以检测实例属性，也可以检测自定义属性。
+&emsp;&emsp;for(x in xxx)既可以检测实例属性，也可以检测自定义属性。
+
+&emsp;&emsp;hasOwnProperty()为true，属性存在在对象实例中；hasOwnProperty()为false，(x in xxx)为true，属性存在在对象的构造器原型中。
 ```
 function Person(){}
 Person.prototype.name = "staven";
@@ -122,10 +143,9 @@ Person.prototype = {
 };
 p.say();	//Uncaught TypeError: p.say is not a function
 ```
-
 ### 原型对象的缺点
-&emsp;&emsp;省略了为构造函数传递初始化参数，结果所有实例在默认情况下豆浆取得相同的属性值。
-&emsp;&emsp;由于原型的属性共享，若在实力上添加一个同名的包含引用类型值得的属性，其他实例该属性也会被改变。
+&emsp;&emsp;省略了为构造函数传递初始化参数，结果所有实例在默认情况下都将取得相同的属性值。
+&emsp;&emsp;由于原型的属性共享，若在实例上添加一个同名的包含引用类型值得的属性，其他实例该属性也会被改变。
 ```
 function Person(){}
 Person.prototype = {
@@ -137,26 +157,12 @@ p1.books.pop();
 console.log(p1.books);		//["html5", "css3"]
 console.log(p2.books);		//["html5", "css3"]
 ```
-### 单体内置对象的方法扩展
-```
-Function.prototype.addMethod = function(name, fn){
-    this.prototype[name] =  fn;
-}
-var method = function(){};
-method.addMethod('checkName',function(){
-    //验证姓名
-    return this;
-}).addMethod('checkEmail',function(){
-    //验证邮箱
-    return this;
-}).addMethod('checkPassword',function(){
-    //验证密码
-    return this;
-});
-var m = new Method();
-m.checkName();
-```
 
 
 
+***
+[☞☞☞深究JavaScript系列☜☜☜](https://github.com/staven630/blog/tree/master/%E6%B7%B1%E7%A9%B6JavaScript)
+***
 
+
+  [1]: /img/bV0n8b
