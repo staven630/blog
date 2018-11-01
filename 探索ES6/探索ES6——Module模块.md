@@ -26,3 +26,21 @@ http.createServer(function(req, res) {});
 * 禁止this指向全局对象
 * 不能使用fn.caller和fn.arguments获取函数调用的堆栈
 * 增加了保留字（比如protected、static和interface）
+
+### export
+1、CMD模块输出的是值的缓存，不存在动态更新。通过export导出的接口，可以获取模块内部实时的值。
+2、export可以卸载模块顶层的任何位置，但不可以在块级作用域内。
+
+### export default
+1、指定模块的默认输出
+
+### import
+1、可以使用as关键字，将输入的变量重命名。
+2、import输入的变量都是只读的。
+3、import具有提升效果，会提升到模块的顶部，优先执行。
+4、多次执行相同import操作，只执行一次。
+5、使用* as 可以整体加载
+
+### import()
+1、import()函数可以用在任何地方，不仅仅是模块，非模块也可以使用。
+2、import()返回一个Promise对象
