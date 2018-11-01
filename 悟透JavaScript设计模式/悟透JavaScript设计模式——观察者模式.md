@@ -8,19 +8,21 @@
 
 * 目标对象与观察者之间耦合关系能够单独扩展及重用
 
+* 在异步编程中，使用观察者模式，无须关注对象在异步运行期间的状态，只需要订阅响应的事件
+
 ### 缺点
 * 一个目标对象有很多直接、简介观察者的话，要通知到所有的观察者会花费很长时间
 
 * 如果在目标和观察者之间有循环依赖，可能会导致系统循环调用
 
 # js中的观察者模式
-* 在类或自执行函数中，一个对象类型的私有变量messages的管理着不同类型的观察者。属性是不同类型的观察者，属性对应的数组包含了对应观察类型的响应事件队列。
+* 在类或自执行函数中，一个对象类型的私有变量messages作为缓存列表，管理着不同类型的观察者。属性是不同类型的观察者，属性对应的数组是一个事件队列。
 
-* 通过register()方法将不同类型的观察者及其响应事件添加到messages中
+* 通过register(type, action)方法将不同类型(type)的观察者及其响应事件(action)添加到缓存列表(messages)中
 
-* 通过publish()方法发布消息，并遍历调用同类型观察者的响应事件
+* 通过publish(type, message)方法发布消息(message)，并遍历同类型(type)观察者， 将消息(message)传递给各观察者，调用其响应事件(action)
 
-* 通过remove()方法取消订阅
+* 通过remove(type, action)方法取消订阅某类型(type)的观察者
 
 es5:
 ```
@@ -29,7 +31,9 @@ var Observable = (function() {
   return {
     register: function(type, action) {
       if (typeof action !== 'function') throw new Error("action必须是function");
-      typeof _messages[type] === 'undefined' ? _messages[type] = [action] : _messages[type].push(action);
+      typeof _messages[type] === 'undefined' 
+        ? _messages[type] = [action] : 
+        _messages[type].push(action);
     },
     publish: function(type, message) {
       if (!_messages[type]) return;
