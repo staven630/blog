@@ -1,6 +1,8 @@
 # 概述
 &emsp;&emsp;有时需要在加载应用之前运行代码，有时希望暂停应用初始化，直到完成某些限制之后再执行。APP_INITIALIZER令牌可以完成这项操作。
+
 &emsp;&emsp;APP_INITIALIZER是一个函数，在应用改程序初始化时被调用。可以在AppModule类的providers中以factory的形式来配置。适合加载简单的数据或简单的校验。
+
 &emsp;&emsp;factory是一个返回值为promise的函数。
 
 # 示例
