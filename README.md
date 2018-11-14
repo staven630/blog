@@ -15,6 +15,9 @@
 ### [Nodejs备忘录](https://github.com/staven630/blog/tree/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95)
 * [exports、module.exports、export、export default](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/exports%E3%80%81module.exports%E3%80%81export%E3%80%81export%20default.md)
 
+### [揭秘vue](https://github.com/staven630/blog/tree/master/%E6%8F%AD%E7%A7%98vue)
+* [揭秘vue——vue-cli3全面配置](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94vue-cli3%E5%85%A8%E9%9D%A2%E9%85%8D%E7%BD%AE.md)
+
 ### [问道Angular](https://github.com/staven630/blog/tree/master/%E9%97%AE%E9%81%93Angular)
 * [问道Angular——Angular设置别名alias、打包命令](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8Dalias%E3%80%81%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4.md)
 * [问道Angular——Angular声明式与入口组件(entryComponents)](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%B8%8E%E5%85%A5%E5%8F%A3%E7%BB%84%E4%BB%B6(entryComponents).md)
