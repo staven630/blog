@@ -17,11 +17,12 @@ VUE_APP_BASE_API = 'https://demo.cn/api'
 ```
 
 ##### .env.production build默认的环境变量
+&emsp;&emsp;如果开启ali oss,VUE_APP_SRC配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
 ```
 NODE_ENV = 'production'
 
 VUE_APP_BASE_API = 'https://demo.com/api'
-VUE_APP_SRC = '/' //如果开启ali oss,此项配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
+VUE_APP_SRC = '/' 
 
 ACCESS_KEY_ID = ''
 ACCESS_KEY_SECRET = ''
@@ -31,12 +32,13 @@ PREFIX = 'demo'
 ```
 
 ##### .env.analyz 用于webpack-bundle-analyzer打包分析
+&emsp;&emsp;如果开启ali oss,VUE_APP_SRC配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
 ```
 NODE_ENV = 'production'
 IS_ANALYZ = 'analyz'
 
 VUE_APP_BASE_API = 'https://demo.com/api'
-VUE_APP_SRC = '/' //如果开启ali oss,此项配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
+VUE_APP_SRC = '/'
 
 ACCESS_KEY_ID = ''
 ACCESS_KEY_SECRET = ''
@@ -381,11 +383,13 @@ VUE_APP_BASE_API = 'https://demo.cn/api'
 ```
 
 .env.production
+
+&emsp;&emsp;如果开启ali oss,VUE_APP_SRC配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
 ```
 NODE_ENV = 'production'
 
 VUE_APP_BASE_API = 'https://demo.com/api'
-VUE_APP_SRC = '/' //如果开启ali oss,此项配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
+VUE_APP_SRC = '/'
 
 ACCESS_KEY_ID = ''
 ACCESS_KEY_SECRET = ''
@@ -395,12 +399,14 @@ PREFIX = 'demo'
 ```
 
 .env.analyz
+
+&emsp;&emsp;如果开启ali oss,VUE_APP_SRC配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
 ```
 NODE_ENV = 'production'
 IS_ANALYZ = 'analyz'
 
 VUE_APP_BASE_API = 'https://demo.com/api'
-VUE_APP_SRC = VUE_APP_SRC = '/' //如果开启ali oss,此项配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
+VUE_APP_SRC = VUE_APP_SRC = '/'
 
 ACCESS_KEY_ID = ''
 ACCESS_KEY_SECRET = ''
