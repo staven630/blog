@@ -7,8 +7,8 @@
 
 # 设计模式
 &emsp;&emsp;Observable实现了两种是设计模式：
-* 观察者模式
-* 迭代器模式
+* [观察者模式]()
+* [迭代器模式](https://github.com/staven630/blog/blob/master/%E6%82%9F%E9%80%8FJavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%82%9F%E9%80%8FJavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F.md)
 
 # 解析
 ```
