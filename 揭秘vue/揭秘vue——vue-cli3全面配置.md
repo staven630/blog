@@ -400,7 +400,7 @@ NODE_ENV = 'production'
 IS_ANALYZ = 'analyz'
 
 VUE_APP_BASE_API = 'https://demo.com/api'
-VUE_APP_SRC = 'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
+VUE_APP_SRC = VUE_APP_SRC = '/' //如果开启ali oss,此项配置为ali oss 资源url前缀，如：'https://staven.oss-cn-hangzhou.aliyuncs.com/demo'
 
 ACCESS_KEY_ID = ''
 ACCESS_KEY_SECRET = ''
