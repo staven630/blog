@@ -94,7 +94,7 @@ module.exports = {
 ```
 ### 整合nuxt-link、no-ssr
 &emsp;&emsp;在.storybook/config.js中添加
-````
+```
 Vue.component('nuxt-link', {
   functional: true,
   render: function (createElement, context) {
@@ -115,4 +115,3 @@ Vue.component('no-ssr', {
   }
 })
 ```
-
