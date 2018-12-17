@@ -118,5 +118,5 @@ sudo service nginx restart
 ```
 npm i -g pm2
 // nuxt-demo：项目目录
-pm2 start npm --name "nuxt-demo" -- run build
+pm2 start npm --name "nuxt-demo" -- run ssr
 ```
