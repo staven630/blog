@@ -35,12 +35,6 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const glob = require('glob-all')
 const path = require('path')
 
-class Extractor {
-  static extract(content) {
-    return content.match(/[A-z0-9-:/]+/g) || []
-  }
-}
-
 module.exports = {
   build: {
     extractCSS: true,
@@ -55,7 +49,11 @@ module.exports = {
             ]),
             extractors: [
               {
-                extractor: Extractor,
+                extractor: class Extractor {
+                  static extract(content) {
+                    return content.match(/[A-z0-9-:/]+/g) || []
+                  }
+                },
                 extensions: ['vue']
               }
             ],
