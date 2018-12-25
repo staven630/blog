@@ -36,7 +36,7 @@ npm run deploy
 ```
 server {
   # 端口，默认是 80
-  listen 89;
+  listen 80;
   # 服务名(写域名或者 ip 地址都可以)
   server_name example.com www.example.com;
   # server 根目录
@@ -56,26 +56,16 @@ server {
 sudo service nginx restart
 ```
 
-- 访问http://www.example.com:89
+- 访问http://www.example.com
 
 # 服务端渲染部署
 
 ### 项目配置
 
-- 修改 package.json
-
-```
-npm i -D npm-run-all
-```
-
-```
-"ssr": "npm-run-all build start"
-```
-
 - 执行
 
 ```
-npm run ssr
+npm run build
 ```
 
 ### nginx 配置
@@ -92,7 +82,7 @@ upstream nodenuxt {
     keepalive 64;
 }
 server {
-  listen 89;
+  listen 80;
   server_name example.com www.example.com;
 
   location / {
@@ -118,5 +108,5 @@ sudo service nginx restart
 ```
 npm i -g pm2
 // nuxt-demo：项目目录
-pm2 start npm --name "nuxt-demo" -- run ssr
+pm2 start npm --name "nuxt-demo" -- run start
 ```
