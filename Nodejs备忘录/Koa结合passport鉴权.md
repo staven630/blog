@@ -223,7 +223,7 @@ router.post('/signup', async ctx => {
   const { username, password, email, code } = ctx.request.body
   if (!code) return errorHandler(ctx, 'code.required')
   const redisExpire = Store.hget(`nodemail:${username}`, 'expire')
-  if (new Date().getTime() - redisExpire < 0) return console.error(ctx, 'code.expire')
+  if (new Date().getTime() - redisExpire < 0) return errorHandler(ctx, 'code.expire')
   const redisCode = Store.hget(`nodemail:${username}`, 'code')
   if (code !== redisCode) return errorHandler(ctx, 'code.error')
   const user = await UserModel.find({ username })
