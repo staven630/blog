@@ -2,7 +2,7 @@
 
 ### utils
 
-&emsp;&emsp;nextFactory 方法收集 to.meta 中 middlewate 的配置，空配置，则走默认的 next()操作。如有 middleware 配置，则首先执行第一个中间件。nextFactory 方法对 next 操作进行包裹，递归调用下一个 middleware，直至结束。
+&emsp;&emsp;nextFactory 方法收集 to.meta 中 middleware 的配置，空配置，则走默认的 next()操作。如有 middleware 配置，则首先执行第一个中间件。nextFactory 方法对 next 操作进行包裹，递归调用下一个 middleware，直至结束。
 
 - utils/index.js
 
