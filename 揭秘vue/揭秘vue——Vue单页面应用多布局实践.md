@@ -176,3 +176,5 @@ router.beforeEach((to, from, next) => nextHandler(to, from, next, router));
 
 export default router;
 ```
+
+注：自从用了多布局，页面路由切换动画特效只有在统一布局间跳转才有效。切换布局后貌似没效果了，后续再研究下。
