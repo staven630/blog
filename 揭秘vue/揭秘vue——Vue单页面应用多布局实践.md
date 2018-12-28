@@ -1,10 +1,10 @@
-&emsp;&emsp;不同业务场景下多种布局，经常出现多种布局或者某些布局会重叠实现，针对 vue 单页面应用，要想实现个性化布局，某种程度上还是不太方便的。Nuxt.js 提供了 layout 属性，下面设置基于 slot 与 router-view 的尝试。
+&emsp;&emsp;不同业务场景下多种布局，经常出现多种布局需求，或者是某些布局会重叠实现。针对 vue 单页面应用，要想实现个性化布局，某种程度上还是不太方便的。Nuxt.js 提供了 layout 属性。下面设置是基于 slot 与 router-view 的尝试。
 
 ### 实例演示
 
 [![Edit vue-multi-layout](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/j27o7qj21w)
 
-### 定义布局
+### 定义布局组件
 
 - layouts/Default.vue
 
@@ -53,7 +53,7 @@ export default {
 <style scoped></style>
 ```
 
-### 注册路由组件
+### 注册布局组件
 
 - main.js
 
@@ -76,7 +76,7 @@ new Vue({
 }).$mount("#app");
 ```
 
-### 监听路由变化，设置动态组件
+### 监听路由变化，设置动态布局组件
 
 - App.vue
 
@@ -122,7 +122,7 @@ body {
 
 ```
 
-# 设置布局方式
+### 通过 meta 设置布局方式
 
 &emsp;&emsp;通过 meta 元信息中 layout 属性设置布局名称。名称为 main.js 中注册的布局组件名去掉-layout 后缀。默认 default 布局(layouts/Default.vue)。
 
