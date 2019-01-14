@@ -38,7 +38,7 @@ console.log(util);  // { name: 'Staven' }
 
 ### export 与 export default
 
-&emsp;&emsp;在一个文件或模块中，export、import 可以使用多次，export default 仅有一个
+&emsp;&emsp;在一个文件或模块中，export、import 可以使用多次，export default 仅有一个。
 
 &emsp;&emsp;export 导出时，import 导入需要使用{}包裹导出的对象; export default 导出时，import 可直接导入对象
 
