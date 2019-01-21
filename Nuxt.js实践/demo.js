@@ -1,26 +1,3 @@
-- 安装依赖
-
-```
-npm i vuex-persistedstate
-```
-
-- plugins/persistedstate.js
-
-```
-import createPersistedState from 'vuex-persistedstate'
-
-export default ({ store }) => {
-  createPersistedState()(store)
-}
-```
-
-&emsp;&emsp;如果希望使用 cookie 存储，则可以使用如下配置
-
-```
-npm i js-cookie
-```
-
-```
 import createPersistedState from 'vuex-persistedstate'
 import * as Cookies from "js-cookie";
 
@@ -43,14 +20,3 @@ export default ({ store }) => {
     setState: cookieStorage.setItem
   })(store)
 }
-```
-
-- 修改 nuxt.config.js
-
-```
-module.exports = {
-  plugins: [
-     { src: "~plugins/persistedstate.js", ssr: false }
-  ]
-}
-```
