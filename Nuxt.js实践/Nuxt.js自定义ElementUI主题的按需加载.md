@@ -227,10 +227,12 @@ Vue.component(CarouselItem.name, CarouselItem)
 
 ```
 module.exports = {
-  plugins: ['@/plugins/element-ui'],
+  css: ['@/theme/reset.css'],
+  plugins: [{ src: '@/plugins/element-ui', ssr: true }],
   build: {
     babel: {
-      plugins: [['component', { libraryName: 'element-ui', styleLibraryName: '~theme' }]]
+      plugins: [['component', { libraryName: 'element-ui', styleLibraryName: '~theme' }]],
+      comments: true
     }
   },
 }
