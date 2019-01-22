@@ -9,12 +9,15 @@ npm i vuex-persistedstate
 ```
 import createPersistedState from 'vuex-persistedstate'
 
-export default ({ store }) => {
-  window.onNuxtReady(() => {
-    createPersistedState(
+export default ({ store, isHMR }) => {
+  if (isHMR) return
+  if (process.client) {
+    window.onNuxtReady(() => {
+      createPersistedState({
         storage: window.sessionStorage
-    )(store)
-  })
+      })(store)
+    })
+  }
 }
 ```
 
