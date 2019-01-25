@@ -17,30 +17,21 @@ export const SET_IDENTITY = 'SET_IDENTITY'
 
 ```
 import { SET_TOKEN, SET_IDENTITY } from '../utils/constants'
-const ERRORS = {
-  10000: '未知错误',
-  10001: '数据验证错误',
-  10002: '数据值未设置',
-  10005: '对应数据不存在，请刷新页面重试',
-  10007: '更新失败',
-  10008: '保存失败',
-  10009: '删除失败',
-  100010: '添加失败',
-  100011: '上传失败',
-  100012: '文件未找到',
-  11001: '请先上传文件',
-  11002: '上传文件类型格式不正确',
-  13001: '百度文件ID注册失败',
-  13002: '文档正在解码中'
-}
-
-const AUTH_ERRORS = {
-  401: '身份认证错误，请重新登录',
-  10003: '身份失效，请重新登录',
-  10004: '身份失效，请重新登录'
-}
 
 import Vue from 'vue'
+
+const ERRORS = new Map([
+  [10000, '未知错误'],
+  [10001, '数据验证错误'],
+  [10002, '添加失败']
+])
+
+const AUTH_ERRORS = new Map([
+  [20001, '身份认证错误，请重新登录'],
+  [20002, '身份失效，请重新登录'],
+  [20003, '身份失效，请重新登录']
+])
+
 const vm = new Vue({})
 
 export default ({ store, $axios }) => {
@@ -60,10 +51,10 @@ export default ({ store, $axios }) => {
   $axios.onError(error => {
     if (process.browser && error.response && error.response.data) {
       const code = error.response.data.code
-      if (AUTH_ERRORS[code]) {
+      if (AUTH_ERRORS.has(code)) {
         vm.$message &&
           vm.$message({
-            message: AUTH_ERRORS[code],
+            message: AUTH_ERRORS.get(code),
             type: 'error'
           })
         store.commit(SET_TOKEN, '')
@@ -71,11 +62,11 @@ export default ({ store, $axios }) => {
         return
       }
 
-      if (ERRORS[code]) {
+      if (ERRORS.has(code)) {
         return (
           vm.$message &&
           vm.$message({
-            message: ERRORS[code],
+            message: ERRORS.get(code),
             type: 'error'
           })
         )
@@ -85,7 +76,6 @@ export default ({ store, $axios }) => {
     }
   })
 }
-
 ```
 
 # 修改 nuxt.config.js
