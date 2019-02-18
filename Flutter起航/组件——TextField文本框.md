@@ -1,17 +1,18 @@
-# TextField组件属性及描述
-| 属性名 | 类型 | 说明 | 默认值 | 取值 |
-| :--------- | :------ | :------- | :------ | :------- |
-| maxLength | int | 最大长度 | | |
-| maxLines | int | 最大行数 | | |
-| autocorrect | bool | 是否自动更正 | | |
-| autofous | bool | 是否自动对焦 | | |
-| obscureText | bool | 是否是密码 | | |
-| textAlign | TextAlign | 文本对齐方式 | | |
-| style | TextStyle | 输入文本的样式 | | |
-| inputFormatters | List<TextInputFormatter> | 允许的输入格式 | | |
-| onChanged | ValueChanded<String> | 内容改变的回调 | | |
-| onSubmitted | ValueChanged<String> | 内容提交的回调 | | |
-| enabled | bool | 是否禁用 | | |
+# TextField 组件属性及描述
+
+| 属性名          | 类型                     | 说明           | 默认值 | 取值 |
+| :-------------- | :----------------------- | :------------- | :----- | :--- |
+| maxLength       | int                      | 最大长度       |        |      |
+| maxLines        | int                      | 最大行数       |        |      |
+| autocorrect     | bool                     | 是否自动更正   |        |      |
+| autofous        | bool                     | 是否自动对焦   |        |      |
+| obscureText     | bool                     | 是否是密码     |        |      |
+| textAlign       | TextAlign                | 文本对齐方式   |        |      |
+| style           | TextStyle                | 输入文本的样式 |        |      |
+| inputFormatters | List<TextInputFormatter> | 允许的输入格式 |        |      |
+| onChanged       | ValueChanded<String>     | 内容改变的回调 |        |      |
+| onSubmitted     | ValueChanged<String>     | 内容提交的回调 |        |      |
+| enabled         | bool                     | 是否禁用       |        |      |
 
 ![textfield](https://raw.githubusercontent.com/staven630/blog/master/Flutter%E8%B5%B7%E8%88%AA/images/textfield.png)
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
       title: 'TextField组件',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('TextField组件示例')   
+          title: Text('TextField组件示例')
         ),
         body: Center(
           child: Padding(
