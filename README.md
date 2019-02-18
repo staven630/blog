@@ -61,7 +61,7 @@
 ##### 主题
 
 - [主题——ThemeData 属性及描述](https://github.com/staven630/blog/blob/master/Flutter%E8%B5%B7%E8%88%AA/%E4%B8%BB%E9%A2%98%E2%80%94%E2%80%94ThemeData%E5%B1%9E%E6%80%A7%E5%8F%8A%E6%8F%8F%E8%BF%B0.md)
-- [主题——MaterialApp 应用组件](https://github.com/staven630/blog/blob/master/Flutter%E8%B5%B7%E8%88%AA/%E4%B8%BB%E9%A2%98%E2%80%94%E2%80%94MaterialApp%E5%BA%94%E7%94%A8%E7%BB%84%E4%BB%B6.md)
+- [主题——MaterialApp 应用](https://github.com/staven630/blog/blob/master/Flutter%E8%B5%B7%E8%88%AA/%E4%B8%BB%E9%A2%98%E2%80%94%E2%80%94MaterialApp%E5%BA%94%E7%94%A8.md)
 
 ##### 组件
 
