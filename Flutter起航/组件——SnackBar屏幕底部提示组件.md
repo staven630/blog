@@ -1,13 +1,15 @@
-#SnackBar组件属性及描述
-| 属性名 | 类型 | 说明 | 默认值 | 取值 |
-| :--------- | :------ | :------- | :------ | :------- |
-| action | SnackBarAction | 消息中执行的事件 | | |
-| animation | Animation<double> | 添加动画效果 | | |
-| content | Widget | 提示消息内容 | | |
-| duration | Duration | 动画执行的时长 | 4.0s | |
-| backgroundColor | Color | 消息面板的背景色 | | |
+# SnackBar 组件属性及描述
+
+| 属性名          | 类型              | 说明             | 默认值 | 取值 |
+| :-------------- | :---------------- | :--------------- | :----- | :--- |
+| action          | SnackBarAction    | 消息中执行的事件 |        |      |
+| animation       | Animation<double> | 添加动画效果     |        |      |
+| content         | Widget            | 提示消息内容     |        |      |
+| duration        | Duration          | 动画执行的时长   | 4.0s   |      |
+| backgroundColor | Color             | 消息面板的背景色 |        |      |
 
 &emsp;&emsp;调用方法
+
 ```
 Scaffold.of(context).showSnackBar();
 ```
