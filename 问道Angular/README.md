@@ -4,3 +4,4 @@
 * [问道Angular——Angular声明式与入口组件(entryComponents)](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%B8%8E%E5%85%A5%E5%8F%A3%E7%BB%84%E4%BB%B6(entryComponents).md)
 * [问道Angular——APP_INITIALIZER](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94APP_INITIALIZER.md)
 * [问道Angular——Angular刷新当前页面](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%88%B7%E6%96%B0%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2.md)
+* [问道Angular——Angular变更检测策略](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E7%AD%96%E7%95%A5(Check%20Detection%20Strategy).md)
