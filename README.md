@@ -1,11 +1,11 @@
 ### [深究 JavaScript](https://github.com/staven630/blog/tree/master/%E6%B7%B1%E7%A9%B6JavaScript)
 
-- [深究JavaScript——创建对象](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1.md)
-- [深究 JavaScript——函数调用与 this 详解](https://github.com/staven630/advanced-ninja/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E4%B8%8Ethis%E8%AF%A6%E8%A7%A3.md)
-- [深究 JavaScript——参数传递与变量复制](https://github.com/staven630/advanced-ninja/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E5%8F%98%E9%87%8F%E5%A4%8D%E5%88%B6.md)
-- [深究 JavaScript——执行上下文](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87.md)
-- [深究 JavaScript——原型](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B.md)
-- [深究 JavaScript——闭包](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E9%97%AD%E5%8C%85.md)
+* [深究JavaScript——创建对象](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1.md)
+* [深究JavaScript——函数调用与this详解](https://github.com/staven630/advanced-ninja/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E4%B8%8Ethis%E8%AF%A6%E8%A7%A3.md)
+* [深究JavaScript——参数传递与变量复制](https://github.com/staven630/advanced-ninja/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E5%8F%98%E9%87%8F%E5%A4%8D%E5%88%B6.md)
+* [深究JavaScript——执行上下文](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87.md)
+* [深究JavaScript——原型](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B.md)
+* [深究JavaScript——闭包](https://github.com/staven630/blog/blob/master/%E6%B7%B1%E7%A9%B6JavaScript/%E6%B7%B1%E7%A9%B6JavaScript%E2%80%94%E2%80%94%E9%97%AD%E5%8C%85.md)
 
 ### [悟透 JavaScript 设计模式](https://github.com/staven630/blog/tree/master/%E6%82%9F%E9%80%8FJavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 
