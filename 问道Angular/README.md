@@ -1,7 +1,12 @@
 ### [问道Angular](https://github.com/staven630/blog/tree/master/%E9%97%AE%E9%81%93Angular)
+
 * [问道Angular——Angular5、6、7项目添加热更新(HMR)功能](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular5%E3%80%816%E3%80%817%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E7%83%AD%E6%9B%B4%E6%96%B0(HMR)%E5%8A%9F%E8%83%BD.md)
 * [问道Angular——Angular设置别名alias、打包命令](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8Dalias%E3%80%81%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4.md)
 * [问道Angular——Angular声明式与入口组件(entryComponents)](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%B8%8E%E5%85%A5%E5%8F%A3%E7%BB%84%E4%BB%B6(entryComponents).md)
 * [问道Angular——APP_INITIALIZER](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94APP_INITIALIZER.md)
 * [问道Angular——Angular刷新当前页面](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%88%B7%E6%96%B0%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2.md)
+* [问道Angular——Angular自定义响应式表单验证](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E8%87%AA%E5%AE%9A%E4%B9%89%E5%93%8D%E5%BA%94%E5%BC%8F%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81.md)
+* [问道Angular——使用Pure Pipes生成NgFor TrackBy函数](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94%E4%BD%BF%E7%94%A8Pure%20Pipes%E7%94%9F%E6%88%90NgFor%20TrackBy%E5%87%BD%E6%95%B0.md)
+* [问道Angular——实现Angular功能齐全的拦截器](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94%E5%AE%9E%E7%8E%B0Angular%E5%8A%9F%E8%83%BD%E9%BD%90%E5%85%A8%E7%9A%84%E6%8B%A6%E6%88%AA%E5%99%A8.md)
+* [问道Angular——Angular、Rx.js实现websocket即时通信](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E3%80%81Rx.js%E5%AE%9E%E7%8E%B0websocket%E5%8D%B3%E6%97%B6%E9%80%9A%E4%BF%A1.md)
 * [问道Angular——Angular变更检测策略](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E7%AD%96%E7%95%A5(Check%20Detection%20Strategy).md)
