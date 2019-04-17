@@ -20,7 +20,7 @@
 ### 配置runGuardsAndResolvers
 &emsp;&emsp;runGuardsAndResolvers有三个值：
 * paramsChange: 仅在路由参数更改时触发。如/reports/:id 中id更改
-* paramsOrQueryParamsChange: 当路由参数更改或参训参数更改时触发。如/reports/:id/list?page=23中的id或page属性更改
+* paramsOrQueryParamsChange: 当路由params参数更改或query参数更改时触发。如/reports/:id/list?page=23中的id或page属性更改
 * always ：始终触发
 ```
 const routes: Routes = [
