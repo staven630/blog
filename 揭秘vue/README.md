@@ -7,4 +7,5 @@
 - [揭秘vue——Vue单页面应用多布局实践](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94Vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%A4%9A%E5%B8%83%E5%B1%80%E5%AE%9E%E8%B7%B5.md)
 - [揭秘vue——Vue生命周期钩子的自定义事件](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6.md)
 - [揭秘vue——Vue性能优化](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94Vue%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md)
-- [揭秘vue——深入Vue响应式原理](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94%E6%B7%B1%E5%85%A5Vue%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86.md)
+- [揭秘vue——深入Vue对象响应式原理](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94%E6%B7%B1%E5%85%A5Vue%E5%AF%B9%E8%B1%A1%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86.md)
+- [揭秘vue——深入Vue数组响应式原理](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94%E6%B7%B1%E5%85%A5Vue%E6%95%B0%E7%BB%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86.md)
