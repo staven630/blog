@@ -1,4 +1,4 @@
-****# 概念
+# 概念
 &emsp;&emsp;当把一个普通的js对象传入Vue实例作为data选项，Vue将遍历此对象的所有属性，并使用Object.defineProperty把这些属性全转为getter/setter。
  
 &emsp;&emsp;Object.defineProperty是ES5中一个无法shim的特性，这也就是Vue不支持IE8以及更低版本浏览器的原因。
