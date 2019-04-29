@@ -1,4 +1,4 @@
-# 概念
+****# 概念
 &emsp;&emsp;当把一个普通的js对象传入Vue实例作为data选项，Vue将遍历此对象的所有属性，并使用Object.defineProperty把这些属性全转为getter/setter。
  
 &emsp;&emsp;Object.defineProperty是ES5中一个无法shim的特性，这也就是Vue不支持IE8以及更低版本浏览器的原因。
@@ -9,6 +9,8 @@
 &emsp;&emsp;对数据进行观测。
 
 &emsp;&emsp;通过Object.defineProperty将数据属性变为getter/setter模式，读取数据时会触发getter，修改数据时会触发setter。同时也会为该数据属性创建一个Dep对象，用于依赖管理。
+
+> Observer.js
 ```
 class Observer {
   constructor(value) {
@@ -52,6 +54,7 @@ class Observer {
 
 &emsp;&emsp;每个Dep实例都维护一个订阅者列表，订阅者是Watcher实例
 
+> Dep.js
  ```
  class Dep {
   constructor() {
@@ -86,6 +89,7 @@ class Observer {
 
 &emsp;&emsp;Watcher的原理:先将自身添加到Dep.target上，然后读取数据,就会触发渲染数据的getter，将当前Watcher实例添加到依赖列表中，当数据发生变化，就会遍历所有依赖派发更新，最后再通过回调函数来更新视图。这样就能主动订阅任意一个数据的变化。
 
+> Watcher.js
 ```
 class Watcher {
   constructor(getter, cb) {
