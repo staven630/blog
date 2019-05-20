@@ -34,7 +34,7 @@ const router = new Router({
 export default router
 ```
 
-# 解决 eslint 无法识别 impor()
+# 解决 eslint 无法识别 import()
 
 &emsp;&emsp;修改.eslintrc.js，添加'eslint:recommended'
 
