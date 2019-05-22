@@ -1,5 +1,7 @@
-    [vue-ts-boilerplate](https://github.com/staven630/vue-ts-boilerplate): 集成了按需加载及自定义主题的elementui、功能齐全的axios、vuex-persist+localforage状态持久化、pritter自动格式化
-    
+> [vue-ts-boilerplate](https://github.com/staven630/vue-ts-boilerplate)
+      
+&emsp;&emsp;集成了按需加载及自定义主题的elementui、功能齐全的axios、vuex-persist+localforage状态持久化、pritter自动格式化
+
 # tslint、pritter配置
 > tsconfig.json
 ```
