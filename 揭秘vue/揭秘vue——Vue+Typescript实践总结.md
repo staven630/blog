@@ -30,6 +30,7 @@
 "no-any": false,
 "no-empty": [true, "allow-empty-catch", "allow-empty-functions"],
 "semicolon": [false, "always", "ignore-bound-class-methods"] // 禁止末尾分号
+"member-access": [true, "no-public"],
 "trailing-comma": [
   false,
   { "multiline": "always", "singleline": "never", "jsx": "never" }
