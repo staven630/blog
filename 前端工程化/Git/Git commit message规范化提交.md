@@ -350,7 +350,7 @@ module.exports = {
 # 总结
 ```
 git config --get commit.template
-git config --local commit.tamplete ./.gitmessage
+git config --local commit.templete ./.gitmessage
 ```
 * .gitmessage
 ```
