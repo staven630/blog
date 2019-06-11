@@ -66,6 +66,7 @@ componentDidUpdate（prevProps，prevState，snapshot）{
 # 卸载阶段(Unmounting)
 ### componentWillUnmount
 
+
 # 错误(Errors)
 ### getDerivedStateFromError
 

@@ -1,7 +1,6 @@
 # 简介
 &emsp;&emsp;Hooks的使用就是为了不编写class的情况下使用state以及其他react特性来实现组件。
 
-
 # useState
 ```
 const [state, setState] = useState(initialState);
