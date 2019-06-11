@@ -26,12 +26,21 @@ module.exports = {
       name: '🚀 发布文章'
     },
     {
+      value: ':wrench: 更改',
+      name: '🔧 更改配置'
+    },
+    {
       value: ':tada: 初始化',
       name: '🎉 初次提交'
     }
   ],
 
-  scopes: [{ name: '修炼React' }, { name: '前端工程化' }, { name: 'CSS秘籍' }],
+  scopes: [
+    { name: '配置文件' },
+    { name: '修炼React' },
+    { name: '前端工程化' },
+    { name: 'CSS秘籍' }
+  ],
 
   // it needs to match the value for field type. Eg.: 'fix'
 
