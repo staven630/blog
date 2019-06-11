@@ -2,36 +2,36 @@ module.exports = {
   // types,
   types: [
     {
-      value: ':heavy_plus_sign: dep_add',
+      value: ':heavy_plus_sign: 新增',
       name: '➕ 添加文章'
     },
     {
-      value: ':heavy_minus_sign: dep_rm',
+      value: ':heavy_minus_sign: 删除',
       name: '➖ 删除文章'
     },
     {
-      value: ':pencil: docs',
+      value: ':pencil: 修改',
       name: '📝 修改文章'
     },
     {
-      value: ':art: style',
+      value: ':art: 修改目录',
       name: '🎨 修改目录'
     },
     {
-      value: ':bookmark: release',
+      value: ':bookmark: 发布',
       name: '🔖 发布版本'
     },
     {
-      value: ':rocket: deploy',
+      value: ':rocket: 发布',
       name: '🚀 发布文章'
     },
     {
-      value: ':tada: init',
+      value: ':tada: 初始化',
       name: '🎉 初次提交'
     }
   ],
 
-  scopes: [{ name: '修炼React' }, { name: '前端工程化' }],
+  scopes: [{ name: '修炼React' }, { name: '前端工程化' }, { name: 'CSS秘籍' }],
 
   // it needs to match the value for field type. Eg.: 'fix'
 
