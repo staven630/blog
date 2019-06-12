@@ -38,8 +38,9 @@ module.exports = {
   scopes: [
     { name: '配置文件' },
     { name: '修炼React' },
+    { name: 'CSS秘籍' },
     { name: '前端工程化' },
-    { name: 'CSS秘籍' }
+    { name: '前端实践' }
   ],
 
   // it needs to match the value for field type. Eg.: 'fix'
