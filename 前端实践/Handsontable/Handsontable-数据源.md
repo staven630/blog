@@ -58,9 +58,9 @@ hotSetting = {
 ```
 hotSetting = {
   data: [
-    { name: { first: '张三', last: '傻' }, age: 25 },
-    { name: { first: '李四', last: '狗' }, age: 11 },
-    { name: { first: '王五', last: '呆' }, age: 21 }
+    { name: { first: '张三', last: '高' }, age: 25 },
+    { name: { first: '李四', last: '富' }, age: 11 },
+    { name: { first: '王五', last: '帅' }, age: 21 }
   ]
 }
 ```
@@ -179,3 +179,4 @@ hotSetting = {
   minSpareRows: 1
 }
 ```
+![空表格](https://raw.githubusercontent.com/staven630/blog/master/assets/handsontable/1-6.png)
