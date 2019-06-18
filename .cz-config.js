@@ -39,9 +39,10 @@ module.exports = {
     { name: '配置文件' },
     { name: '修炼React' },
     { name: 'CSS秘籍' },
-    {name: '前端性能优化'},
+    { name: '前端性能优化' },
     { name: '前端工程化' },
-    { name: '前端实践' }
+    { name: '前端实践' },
+    { name: '进击Python' }
   ],
 
   // it needs to match the value for field type. Eg.: 'fix'
