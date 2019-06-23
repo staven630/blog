@@ -249,12 +249,6 @@ immediate1、immediate1_promise、immediate2、immediate2_promise、
 immediate1_process、immediate2_process、immediate1_then、immediate2_then
 ```
 
-* 第三轮事件循环
-
-| 宏任务队列             | 微任务队列 |
-| :--------------------- | :--------- |
-| immediate1、immediate2 |            |
-
 # 模拟调用堆栈
 ```
 let macrotask = []
