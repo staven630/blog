@@ -37,6 +37,7 @@ module.exports = {
 
   scopes: [
     { name: '配置文件' },
+    { name: '深究JavaScript' },
     { name: '修炼React' },
     { name: 'CSS秘籍' },
     { name: '前端性能优化' },
