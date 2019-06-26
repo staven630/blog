@@ -22,7 +22,6 @@ export default {
   }
 }
 </script>
-
 ```
 
 # 动态注册 Hooks
@@ -30,7 +29,6 @@ export default {
 &emsp;&emsp;可以是使用$on,$once,\$off 动态注册生命周期 hooks 事件。
 
 ```
-
 <template>
   <div></div>
 </template>
@@ -45,9 +43,4 @@ export default {
   }
 }
 </script>
-
 ```
-
----
-
-[Vue.js Component Hooks as Events](https://alligator.io/vuejs/component-event-hooks/)
