@@ -40,6 +40,8 @@ module.exports = {
     { name: '深究JavaScript' },
     { name: '修炼React' },
     { name: '揭秘Vue' },
+    { name: 'Nuxt.js实践' },
+    { name: '问道Angular' },
     { name: 'CSS秘籍' },
     { name: '前端性能优化' },
     { name: '前端工程化' },
