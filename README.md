@@ -88,7 +88,7 @@
 
 - [Nodejs备忘录——window 上利用 NVM 安装 node.js](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/window%E4%B8%8A%E5%88%A9%E7%94%A8NVM%E5%AE%89%E8%A3%85node.js.md)
 - [Nodejs备忘录——exports、module.exports、export、export default](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/exports%E3%80%81module.exports%E3%80%81export%E3%80%81export%20default.md)
-- [Nodejs备忘录——PM2详解](https://github.com/staven630/blog/tree/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95%E2%80%94%E2%80%94PM2%E8%AF%A6%E8%A7%A3.md)
+- [Nodejs备忘录——PM2详解](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95%E2%80%94%E2%80%94PM2%E8%AF%A6%E8%A7%A3.md)
 - [Nodejs备忘录——Koa 结合 passport 鉴权](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/Koa%E7%BB%93%E5%90%88passport%E9%89%B4%E6%9D%83.md)
 
 
