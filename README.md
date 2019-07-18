@@ -65,8 +65,9 @@
 
 ### [⚒️ 前端工程化](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96)
 
-##### &emsp;&emsp;[Git:](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Git)
-* [前端工程化——Git commit message规范化提交](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Git/Git%20commit%20message%E8%A7%84%E8%8C%83%E5%8C%96%E6%8F%90%E4%BA%A4.md)
+* [Git commit message规范化提交](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Git%20commit%20message%E8%A7%84%E8%8C%83%E5%8C%96%E6%8F%90%E4%BA%A4.md)
+* [PM2全面解析](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/PM2%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.md)
+* [使用Rollup构建js库](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BD%BF%E7%94%A8Rollup%E6%9E%84%E5%BB%BAjs%E5%BA%93.md)
 
 <!-- ### [🥂 前端实践](https://github.com/staven630/blog/tree/master/%E5%89%8D%E7%AB%AF%E5%AE%9E%E8%B7%B5)
 
@@ -88,7 +89,6 @@
 
 - [Nodejs备忘录——window 上利用 NVM 安装 node.js](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/window%E4%B8%8A%E5%88%A9%E7%94%A8NVM%E5%AE%89%E8%A3%85node.js.md)
 - [Nodejs备忘录——exports、module.exports、export、export default](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/exports%E3%80%81module.exports%E3%80%81export%E3%80%81export%20default.md)
-- [Nodejs备忘录——PM2详解](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95%E2%80%94%E2%80%94PM2%E8%AF%A6%E8%A7%A3.md)
 - [Nodejs备忘录——Koa 结合 passport 鉴权](https://github.com/staven630/blog/blob/master/Nodejs%E5%A4%87%E5%BF%98%E5%BD%95/Koa%E7%BB%93%E5%90%88passport%E9%89%B4%E6%9D%83.md)
 
 
