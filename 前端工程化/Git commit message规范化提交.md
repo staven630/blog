@@ -75,7 +75,7 @@ commitizen init cz-conventional-changelog --save-dev --save-exact --force
 # 校验message
 &emsp;&emsp;[commitlint](https://github.com/conventional-changelog/commitlint)可以lint commit messages，如果提交的不符合指定的规范，直接拒绝提交。可以配置校验配置[@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
 ```
-npm i -D @commitlint/config-conventional @commitlint/cli
+npm i -D commitizen @commitlint/config-conventional @commitlint/cli
 ```
 * commitlint.config.js
 ```

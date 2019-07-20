@@ -192,10 +192,28 @@ export default {
       }
     }
   ],
-  external: ['lodash/random']
+  external: [
+    'lodash/random',
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies)
+  ]
 }
 ```
 &emsp;&emsp;同理，output配置项中name表示的是当前库的全局变量名。
+
+# [rollup-plugin-json: 转换 json](https://github.com/rollup/rollup-plugin-json)
+```bash
+npm i -D rollup-plugin-json
+```
+
+```javascript
+import json from "rollup-plugin-json";
+export default {
+  plugins: [
+    json()
+  ]
+};
+```
 
 # 编译js
 - [rollup-plugin-babel](https://github.com/rollup/rollup-plugin-babel)：使用Babel编译ES 2015+代码
@@ -203,7 +221,7 @@ export default {
 &emsp;&emsp;使用rollup-plugin-babel将您的ES 2015+代码转换为向后兼容的JavaScript版本
 
 ```bash
-npm i -D @babel/core  @babel/preset-env rollup-plugin-babel
+npm i -D @babel/core  @babel/preset-env rollup-plugin-babel babel-plugin-external-helpers
 ```
 &emsp;&emsp;@babel/preset-env可以轻松地定位最小运行环境，不需要手动选择插件。{useBuiltIns: 'usage'} 仅为已使用的功能导入polyfill。
 
@@ -217,14 +235,14 @@ export default {
       presets: [['@babel/preset-env', { modules: false }]],
       include: ['src/**'],
       exclude: ['node_modules/**'], // 避免转译第三方脚本
-      // plugins: ['babel-plugin-transform-object-rest-spread'],
+      // plugins: ['external-helpers', 'babel-plugin-transform-object-rest-spread'], 
       runtimeHelpers: true, // 用来开启transform-runtme
       comments: false  // 删除注释
     })
   ]
 }
 ```
-- [rollup-plugin-buble](https://github.com/rollup/rollup-plugin-buble)
+- [rollup-plugin-buble](https://github.com/rollup/rollup-plugin-buble):显示bundle文件大小
   
 &emsp;&emsp;将 ES6+代码编译成 ES2015 标准。配合[rollup-plugin-async](https://github.com/leebyron/rollup-plugin-async)来支持async/await。
 
@@ -341,16 +359,7 @@ export default {
   ]
 }
 ```
-# [rollup-plugin-json: 转换 json](https://github.com/rollup/rollup-plugin-json)
-> npm i -D rollup-plugin-json
-```
-import json from "rollup-plugin-json";
-export default {
-  plugins: [
-    json()
-  ]
-};
-```
+
 # [rollup-plugin-replace:设置环境变量](https://github.com/rollup/rollup-plugin-replace)
 > npm i -D rollup-plugin-replace
 ```
@@ -447,6 +456,41 @@ export default {
 		"build:watch": "rollup -cw",
 	}
 }
+```
+
+
+# [rollup-plugin-filesize](https://github.com/ritz078/rollup-plugin-filesize)
+```bash
+npm i -D rollup-plugin-filesize
+```
+
+```javascript
+import filesize from 'rollup-plugin-filesize'
+
+export default {
+  plugins: [
+    filesize()
+  ]
+}
+```
+
+# [rollup-plugin-istanbul](https://github.com/artberri/rollup-plugin-istanbul)
+
+```bash
+npm i -D rollup-plugin-istanbul
+```
+
+```javascript
+import istanbul from 'rollup-plugin-istanbul';
+```
+
+# rollup-plugin-serve
+```bash
+npm install -D rollup-plugin-serve
+```
+
+```javascript
+
 ```
 
 
