@@ -1,6 +1,6 @@
 # Commit Message格式
 &emsp;&emsp;目前使用较多的是 Conventional Commits specification规范。Commit Message结构如下所示：
-```
+```text
 <type>(<scope>): <subject>
 
 <body>
@@ -42,7 +42,7 @@ git config --get commit.template
 git config --local commit.template ./.gitmessage
 ```
 * .gitmessage
-```
+```text
 <type>(<scope>): <subject>
 
 <body>
@@ -55,13 +55,14 @@ git config --local commit.template ./.gitmessage
 
 &emsp;&emsp;为 commitizen 指定一个 Adapter（适配器），如 [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) (一个符合 Angular团队规范的 preset),使得 commitizen 按照指定的规范帮助生成 commit message。
 
-```
+```bash
 npm i -g commitizen
 commitizen init cz-conventional-changelog --save-dev --save-exact --force
 ```
 * package.json
-```
+```json
 "scripts": {
+  "commit": "git-cz",
   "commit:retry": "git-cz --retry",
   "commit:noverify": "git-cz --no-verify",
 },
@@ -78,7 +79,7 @@ commitizen init cz-conventional-changelog --save-dev --save-exact --force
 npm i -D commitizen @commitlint/config-conventional @commitlint/cli
 ```
 * commitlint.config.js
-```
+```js
 module.exports = {
   extends: ['@commitlint/config-conventional']
 }
@@ -146,6 +147,53 @@ npm i -D cz-customizable
     "config": "./.cz-config.js"
   }
 }
+```
+* ./cz-config.js
+```js
+'use strict';
+
+module.exports = {
+
+  types: [
+    {
+      value: 'feat',
+      name: '✨  feat:     A new feature'  // 新增功能
+    },
+    {
+      value: 'fix',
+      name: '🐞  fix:      A bug fix' // 修复bug
+    },
+    {
+      value: 'docs',
+      name: '📚  docs:     Documentation only changes'  // 文档变更
+    },
+    {
+      value: 'style',
+      name: '💅  style:    Code Style, Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)'  // 代码格式（空格、分号等格式修改）
+    },
+    {
+      value: 'refactor',
+      name: '🛠  refactor: A code change that neither fixes a bug nor adds a feature' // 代码重构
+    },
+    {
+      value: 'test',
+      name: '🏁  test:     Add missing tests or correcting existing tests'  // 测试
+    },
+    {
+      value: 'chore',
+      name: '🗯  chore:    Changes that don\'t modify src or test files. Such as updating build tasks, package manager' // 变更构建流程或辅助工具
+    },
+    {
+      value: 'revert',
+      name: '⏪  revert:   Revert to a commit' // 代码回滚
+    }
+  ],
+
+  scopes: [],
+
+  allowCustomScopes: true,
+  allowBreakingChanges: ["feat", "fix"]
+};
 ```
 
 ### 使用commitlint-config-gitmoji
@@ -377,6 +425,7 @@ module.exports = {
 ```
 {
   "scripts": {
+    "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commit:noverify": "git-cz --no-verify",
     "release": "standard-version"
