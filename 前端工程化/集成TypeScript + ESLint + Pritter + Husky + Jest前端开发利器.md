@@ -1,5 +1,3 @@
-[pritter-eslint-ts](https://github.com/staven630/pritter-eslint-ts)
-
 # 初始化
 ```
 mkdir demo

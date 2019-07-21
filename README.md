@@ -66,6 +66,7 @@
 ### [⚒️ 前端工程化](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96)
 
 * [Git commit message规范化提交](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/Git%20commit%20message%E8%A7%84%E8%8C%83%E5%8C%96%E6%8F%90%E4%BA%A4.md)
+* [集成TypeScript + ESLint + Pritter + Husky + Jest前端开发利器](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E9%9B%86%E6%88%90TypeScript%20%2B%20ESLint%20%2B%20Pritter%20%2B%20Husky%20%2B%20Jest%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%88%A9%E5%99%A8.md)
 * [PM2全面解析](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/PM2%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90.md)
 * [使用Rollup构建js库](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BD%BF%E7%94%A8Rollup%E6%9E%84%E5%BB%BAjs%E5%BA%93.md)
 
