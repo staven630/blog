@@ -55,7 +55,7 @@
 * [问道Angular——Angular变更检测策略](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E7%AD%96%E7%95%A5(Check%20Detection%20Strategy).md)
 
 ### [🍈 实践TypeScript]()
-[TypeScript中Interface与Type的区别](https://github.com/staven630/blog/blob/master/%E5%AE%9E%E8%B7%B5TypeScript/TypeScript%E4%B8%ADInterface%E4%B8%8EType%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+* [实践TypeScript——TypeScript中Interface与Type的区别](https://github.com/staven630/blog/blob/master/%E5%AE%9E%E8%B7%B5TypeScript/%E5%AE%9E%E8%B7%B5TypeScript%E2%80%94%E2%80%94TypeScript%E4%B8%ADInterface%E4%B8%8EType%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 
 ### [💝 CSS秘籍](https://github.com/staven630/blog/tree/master/CSS%E7%A7%98%E7%B1%8D)
 
