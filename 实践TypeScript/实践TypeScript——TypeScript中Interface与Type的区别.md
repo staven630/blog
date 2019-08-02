@@ -40,24 +40,7 @@ interface Cat {
 type animal = [Dog, Cat]
 ```
 
-### 2. 创建新名称
-&emsp;&emsp;interface可以为实例创建新名称。而type不能。
-
-```ts
-import React, { MouseEvent, SFC } from 'react'
-
-type Props = {
-  onClick: (event: MouseEvent<HTMLElement>) => void
-}
-
-const Button: SFC<Props> = ({ onClick: handleClick, children }) => (
-  <button onClick={handleClick}>{children}</button>
-)
-
-export default Button
-```
-
-### 3. 扩展
+### 2. 扩展性
 &emsp;&emsp;接口可以extends、implements,从而扩展多个接口或类。类型没有扩展功能。
 
 * interface extends interface
@@ -103,7 +86,7 @@ age: number
 } & Person
 ```
 
-### 4. 合并声明
+### 3. 合并声明
 &emsp;&emsp;定义两个相同名称的接口会合并声明。
 
 &emsp;&emsp;定义两个同名的type会出现异常。
@@ -123,7 +106,7 @@ interface Person {
 } 
 ```
 
-### 5. typeof
+### 4. typeof
 &emsp;&emsp;type可以使用typeof获取实例类型
 
 ```ts
