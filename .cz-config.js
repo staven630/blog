@@ -43,6 +43,7 @@ module.exports = {
     { name: '实践TypeScript' },
     { name: 'Nuxt.js实践' },
     { name: '问道Angular' },
+    { name: 'Electron指南' },
     { name: 'CSS秘籍' },
     { name: 'Nodejs备忘录' },
     { name: '前端性能优化' },
