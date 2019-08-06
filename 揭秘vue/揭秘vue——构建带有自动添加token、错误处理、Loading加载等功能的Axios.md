@@ -40,7 +40,7 @@ const tokenInterceptor = config => {
   const token = store.getters['auth/token']
   if (token) {
     config.headers = {
-      ...config,
+      ...config.headers,
       Authorization: `Bearer ${token}`
     }
   }
