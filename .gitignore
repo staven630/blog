@@ -6,6 +6,7 @@ node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.DS_Store
 
 # Editor directories and files
 .idea
@@ -16,4 +17,4 @@ yarn-error.log*
 *.sln
 *.sw*
 
-package-lock.json
+package-lock.json*
