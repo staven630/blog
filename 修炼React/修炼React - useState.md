@@ -24,7 +24,7 @@ function useState<S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | 
 # 使用typescript注意项
 ### 对state类型约束
 &emsp;&emsp;可以通过useState<S\>这样提供泛型约束，来限制state类型。
-```typescript
+```tsx
 const Color: React.FC = () => {
   const [color, setColor] = useState<'red' | 'blue'>()
   return (
@@ -41,7 +41,7 @@ const Color: React.FC = () => {
 
 ### state操作容错处理
 &emsp;&emsp;如果useState()没有初始值，可能返回undefined，应该对state进行操作可能会报错，需要先做容错处理。
-```ts
+```tsx
 const Color: React.FC = () => {
   const [color, setColor] = useState<'red' | 'blue'>()
   return (
@@ -64,7 +64,7 @@ const Color: React.FC = () => {
 
 ### useState清除状态
 &emsp;&emsp;如果useState()具有初始值，要向清空state的值，需要确保state可以是undefined
-```ts
+```tsx
 const Color: React.FC = () => {
   // 根据类型推断state为string，不能为undefined
   // const [color, setColor] = useState('blue')

@@ -2,12 +2,12 @@
 &emsp;&emsp;Hooks的使用就是为了不编写class的情况下使用state以及其他react特性来实现组件。
 
 # useState
-```
+```jsx
 const [state, setState] = useState(initialState);
 ```
 
 &emsp;&emsp;接收一个initialState初始值作为参数，返回一个长度为2的数组，第一项是state的值，第二项是更新state的函数。
-```
+```jsx
 import { useState } from 'react'
 
 const Counter = () => {
@@ -25,7 +25,7 @@ const Counter = () => {
 
 ### 函数式更新
 &emsp;&emsp;如果新的 state 需要通过使用先前的 state 计算得出，那么可以将函数传递给 setState。
-```
+```jsx
 import { useState } from 'react'
 
 const Counter = () => {
@@ -39,7 +39,7 @@ const Counter = () => {
 }
 ```
 &emsp;&emsp;与class组件中的setState方法不同，useState不会自动合并更新对象。可以用函数式的setState结合展开运算符来达到合并更新对象的效果。
-```
+```jsx
 setState(prevState => {
   // 也可以使用 Object.assign
   return {...prevState, ...values};
@@ -49,7 +49,7 @@ setState(prevState => {
 
 ### 惰性初始state
 &emsp;&emsp;initialState 参数只会在组件的初始渲染中起作用，后续渲染时会被忽略。如果初始 state 需要通过复杂计算获得，则可以传入一个函数，在函数中计算并返回初始的 state，此函数只在初始渲染时被调用：
-```
+```jsx
 const [state, setState] = useState(() => {
   const initialState = someExpensiveComputation(props);
   return initialState;
@@ -58,7 +58,7 @@ const [state, setState] = useState(() => {
 
 # useEffect
 &emsp;&emsp;useEffect()接收一个函数作为参数，组件每次渲染都会执行这个函数，同时实现了componentDidMount 和 componentDidUpdate更新副作用效果。
-```
+```jsx
 import { useState, useEffect } from 'react'
 
 const Counter = () => {
@@ -82,7 +82,7 @@ const Counter = () => {
 ##### 只模拟componentDidMount
 
 &emsp;&emsp;虽然useEffect(fn, [])可以模拟componentDidMount，但是并不完全相等，useEffect会捕获props和state。即便在回调函数里，拿到的通常还是初始的props和state。如果想要拿到最新的值ref。不过，通常会有更简单的实现方式，所以不一定要用ref。Effects的心智模型更接近于实现状态同步，而不是响应生命周期事件。
-```
+```jsx
 import { useState, useEffect } from 'react'
 
 const Counter = () => {
@@ -112,7 +112,7 @@ const Counter = () => {
 
 &emsp;&emsp;但是useEffect函数必须返回一个清理函数或者什么也不返回，不支持promises和useEffect(async () => {})。可以通过以下方式来使用async
 
-```
+```jsx
 const [data, setData] = useState([]);
 
 useEffect(() => {
@@ -130,7 +130,7 @@ useEffect(() => {
 
 
 # useContext
-```
+```jsx
 const MyContext = createContext();
 const value = useContext(MyContext);
 ```
@@ -138,7 +138,7 @@ const value = useContext(MyContext);
 &emsp;&emsp;接收一个context对象(React.createContext的返回值)并返回该context的当前值。当前的context值由上层组件中距离当前组件最近的<MyContext.Provider>的value prop决定。
 
 &emsp;&emsp;当组件上层最近的<MyContext.Provider>更新时,该Hook会触发重渲染，并使用最新传递给MyContext provider的context value值。
-```
+```jsx
 import React, { createContext, useContext } from 'react'
 
 type Theme = 'light' | 'dark'
@@ -160,7 +160,7 @@ const MyApp = () => (
 # useReducer
 
 * CounterReducer.tsx
-```
+```jsx
 export const initialState = {
   count: 0
 }
@@ -192,7 +192,7 @@ export const counterReducer = (state: State, action: Action) => {
 }
 ```
 * Counter.tsx
-```
+```jsx
 import React, { useReducer } from 'react'
 import { counterReducer, TYPES, initialState } from './CounterReducer'
 
@@ -214,7 +214,7 @@ export default Counter
 &emsp;&emsp;根据回调函数及其依赖项数组返回回调函数的memoized版本。该回调函数仅在某个依赖项改变时才会更新。
 
 &emsp;&emsp;useCallback(dn, deps)相当于useDMemo(() => fn, deps)
-```
+```jsx
 const value = 10;
 const result = useCallback(() => value * 2, [value]);
 ```
@@ -225,20 +225,20 @@ const result = useCallback(() => value * 2, [value]);
 &emsp;&emsp;传入useMemo的回调函数会在渲染期间执行。不要在这个函数内部执行与渲染无关的操作。
 
 &emsp;&emsp;如果没有提供依赖数组，useMemo会在每次渲染时都会极端新的值。
-```
+```jsx
 const value = 10;
 const result = useMemo(() => value * 2, [value]);
 ```
 
 # useRef
-```
+```jsx
 const customRef = useRef(initialValue);
 ```
 
 &emsp;&emsp;返回一个可变的ref对象，在组件的整个生命周期内保持不变。 其.current属性指挂载的Dom元素。
 
 &emsp;&emsp;useRef会在每次渲染时都返回同一个ref对象。
-```
+```jsx
 import React, { useRef } from 'react'
 
 function FocusInput() {
@@ -254,14 +254,14 @@ function FocusInput() {
 ```
 
 # useImperativeHandle
-```
+```jsx
 useImperativeHandle(ref, createHandle, [deps])
 ```
 
 &emsp;&emsp;在使用 ref 时自定义暴露给父组件的实例值。在大多数情况下，应当避免使用ref这样的命令式代码。useImperativeHandle应当与forwardRef一起使用
 
 * FocusInput.tsx
-```
+```jsx
 import React, {
   forwardRef,
   RefForwardingComponent,
@@ -298,7 +298,7 @@ export default forwardRef(MyInput)
 ```
 
 * Input.tsx
-```
+```jsx
 import React, { useRef, useEffect } from 'react'
 import MyInput, { InputHandles } from './myInput'
 
@@ -320,7 +320,7 @@ export default Input
 # useLayoutEffect
 
 # useDebugValue
-```
+```jsxjsx
 useDebugValue(value)
 ```
 
@@ -328,7 +328,7 @@ useDebugValue(value)
 
 ##### 延迟格式化debug值
 &emsp;&emsp;useDebugValue 接受一个格式化函数作为可选的第二个参数，该函数只有在Hook被检查时才会被调用。它接受debug值作为参数，并且会返回一个格式化的显示值。
-```
+```jsx
 useDebugValue(date, date => date.toDateString())
 ```
 
@@ -342,11 +342,11 @@ useDebugValue(date, date => date.toDateString())
 * ✅在自定义Hook中调用其他Hook
   
 ### eslint-plugin-react-hooks
-```
+```bash
 npm install eslint-plugin-react-hooks --save-dev
 ```
 .eslintrc
-```
+```json
 {
   "plugins": [
     "react-hooks"

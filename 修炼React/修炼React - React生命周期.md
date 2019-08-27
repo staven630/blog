@@ -1,7 +1,7 @@
 # 挂载阶段(Mounting)
 ### constructor
 &emsp;&emsp;类组件，首先会调用constructor。
-```
+```jsx
 class MyComponent extends Component {
   constructor(props) {
     super(props)
@@ -19,7 +19,7 @@ class MyComponent extends Component {
 
 ### getDerivedStateFromProps(props, state)
 &emsp;&emsp;在渲染之前调用的最后一个方法。可以根据初始的props设置state,但推荐在constructor中初始化state。
-```
+```jsx
 static getDerivedStateFromProps(props, state) {
   return { count: state.value }
 }
@@ -46,7 +46,7 @@ static getDerivedStateFromProps(props, state) {
 
 ### shouldComponentUpdate
 &emsp;&emsp;总是返回一个布尔值。默认情况下，返回true。
-```
+```jsx
 shouldComponentUpdate(nextProps, nextState) {
   return nextState.count !== nextProps.value
 }
@@ -58,7 +58,7 @@ shouldComponentUpdate(nextProps, nextState) {
 &emsp;&emsp;基于props的变化，通过返回新的state来实现更新。
 
 ### componentDidUpdate
-```
+```jsx
 componentDidUpdate（prevProps，prevState，snapshot）{ 
 }
 ```

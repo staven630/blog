@@ -12,7 +12,7 @@
 
 ### [⚛️ 修炼React](https://github.com/staven630/blog/tree/master/%E4%BF%AE%E7%82%BCReact)
 
-* [修炼React - React生命周期](https://github.com/staven630/blog/tree/master/%E4%BF%AE%E7%82%BCReact/%E4%BF%AE%E7%82%BCReact%E2%80%94%E2%80%94React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
+* [修炼React - React生命周期](https://github.com/staven630/blog/blob/master/%E4%BF%AE%E7%82%BCReact/%E4%BF%AE%E7%82%BCReact%20-%20React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
 * [修炼React - React Context](https://github.com/staven630/blog/blob/master/%E4%BF%AE%E7%82%BCReact/%E4%BF%AE%E7%82%BCReact%20-%20React%20Context.md)
 * [修炼React - React Hooks](https://github.com/staven630/blog/blob/master/%E4%BF%AE%E7%82%BCReact/%E4%BF%AE%E7%82%BCReact%20-%20React%20Hooks.md)
 * [修炼React - useState](https://github.com/staven630/blog/blob/master/%E4%BF%AE%E7%82%BCReact/%E4%BF%AE%E7%82%BCReact%20-%20useState.md)
