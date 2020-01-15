@@ -99,7 +99,7 @@ export class LoadThemeService {
   }
 }
 ```
-
+# 使用
 ```js
 import {Component, OnInit} from '@angular/core';
 import {LoadThemeService} from './services/load-theme.service';

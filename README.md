@@ -46,7 +46,7 @@
 ### [🍎 问道Angular](https://github.com/staven630/blog/tree/master/%E9%97%AE%E9%81%93Angular)
 
 * [问道Angular——Angular5、6、7项目添加热更新(HMR)功能](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular5%E3%80%816%E3%80%817%E9%A1%B9%E7%9B%AE%E6%B7%BB%E5%8A%A0%E7%83%AD%E6%9B%B4%E6%96%B0(HMR)%E5%8A%9F%E8%83%BD.md)
-* [问道Angular/问道Angular——Angular动态加载JS、css文件](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDJS%E3%80%81css%E6%96%87%E4%BB%B6.md)
+* [问道Angular——Angular动态加载JS、css文件](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDJS%E3%80%81css%E6%96%87%E4%BB%B6.md)
 * [问道Angular——Angular设置别名alias、打包命令](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8Dalias%E3%80%81%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4.md)
 * [问道Angular——Angular声明式与入口组件(entryComponents)](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%B8%8E%E5%85%A5%E5%8F%A3%E7%BB%84%E4%BB%B6(entryComponents).md)
 * [问道Angular——APP_INITIALIZER](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94APP_INITIALIZER.md)
