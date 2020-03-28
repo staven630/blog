@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz",
     "commit:retry": "git-cz --retry",
     "commit:noverify": "git-cz --no-verify",
     "release": "standard-version",

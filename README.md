@@ -21,7 +21,7 @@
 
 * [揭秘Vue——vue-cli3 全面配置](https://github.com/staven630/vue-cli3-config)
 * [揭秘Vue——Vue生命周期钩子的自定义事件](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6.md)
-* [揭秘vue——$attrs、$listeners与Vue自适应组件](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94$attrs%E3%80%81$listeners%E4%B8%8EVue%E8%87%AA%E9%80%82%E5%BA%94%E7%BB%84%E4%BB%B6.md)
+* [揭秘vue——$attrs与Vue包装器组件](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94$attrs%E4%B8%8EVue%E5%8C%85%E8%A3%85%E5%99%A8%E7%BB%84%E4%BB%B6.md)
 * [揭秘Vue——构建带有自动添加token、错误处理、Loading加载等功能的Axios](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94%E6%9E%84%E5%BB%BA%E5%B8%A6%E6%9C%89%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0token%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E3%80%81Loading%E5%8A%A0%E8%BD%BD%E7%AD%89%E5%8A%9F%E8%83%BD%E7%9A%84Axios.md)
 * [揭秘Vue——Vue中的错误处理](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94Vue%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86.md)
 * [揭秘Vue——Vue-router延迟加载及设置chunkName](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%E2%80%94%E2%80%94vue-router%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%8F%8A%E8%AE%BE%E7%BD%AEchunkName.md)
@@ -61,7 +61,9 @@
 * [实践TypeScript——TypeScript中Interface与Type的区别](https://github.com/staven630/blog/blob/master/%E5%AE%9E%E8%B7%B5TypeScript/%E5%AE%9E%E8%B7%B5TypeScript%E2%80%94%E2%80%94TypeScript%E4%B8%ADInterface%E4%B8%8EType%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 
 ### [🍒 Electron指南](https://github.com/staven630/blog/tree/master/Electron%E6%8C%87%E5%8D%97)
-* [Electron 进程与进程通信](https://github.com/staven630/blog/blob/master/Electron%E6%8C%87%E5%8D%97/Electron%20%E8%BF%9B%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1.md)
+* [Mac上屡试不爽的Electron安装方法](https://github.com/staven630/blog/blob/master/Electron%E6%8C%87%E5%8D%97/Mac%E4%B8%8A%E5%B1%A1%E8%AF%95%E4%B8%8D%E7%88%BD%E7%9A%84Electron%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.md)
+* [Electron 主进程与渲染进程](https://github.com/staven630/blog/blob/master/Electron%E6%8C%87%E5%8D%97/Electron%20%E4%B8%BB%E8%BF%9B%E7%A8%8B%E4%B8%8E%E6%B8%B2%E6%9F%93%E8%BF%9B%E7%A8%8B.md)
+* [Electron 进程间通信](https://github.com/staven630/blog/blob/master/Electron%E6%8C%87%E5%8D%97/Electron%20%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1.md)
 
 ### [💝 CSS秘籍](https://github.com/staven630/blog/tree/master/CSS%E7%A7%98%E7%B1%8D)
 
