@@ -61,8 +61,8 @@
 * [问道Angular——Angular变更检测策略](https://github.com/staven630/blog/blob/master/%E9%97%AE%E9%81%93Angular/%E9%97%AE%E9%81%93Angular%E2%80%94%E2%80%94Angular%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E7%AD%96%E7%95%A5(Check%20Detection%20Strategy).md)
 
 ### [🍈 实践TypeScript](https://github.com/staven630/blog/tree/master/%E5%AE%9E%E8%B7%B5TypeScript)
-* [实践TypeScript - 基础类型](https://github.com/staven630/blog/tree/master/%E5%AE%9E%E8%B7%B5TypeScript%20-%20%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B.md)
-* [实践TypeScript - Interface与Type的区别](https://github.com/staven630/blog/tree/master/%E5%AE%9E%E8%B7%B5TypeScript%20-%20Interface%E4%B8%8EType%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+* [实践TypeScript - 基础类型](https://github.com/staven630/blog/blob/master/%E5%AE%9E%E8%B7%B5TypeScript/%E5%AE%9E%E8%B7%B5TypeScript%20-%20%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B.md)
+* [实践TypeScript - Interface与Type的区别](https://github.com/staven630/blog/blob/master/%E5%AE%9E%E8%B7%B5TypeScript/%E5%AE%9E%E8%B7%B5TypeScript%20-%20Interface%E4%B8%8EType%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 
 ### [🍒 Electron指南](https://github.com/staven630/blog/tree/master/Electron%E6%8C%87%E5%8D%97)
 * [Mac上屡试不爽的Electron安装方法](https://github.com/staven630/blog/blob/master/Electron%E6%8C%87%E5%8D%97/Mac%E4%B8%8A%E5%B1%A1%E8%AF%95%E4%B8%8D%E7%88%BD%E7%9A%84Electron%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95.md)
