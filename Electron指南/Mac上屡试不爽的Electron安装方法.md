@@ -23,3 +23,15 @@ cd httpsgithub.comelectronelectronreleasesdownloadv8.2.0electron-v8.2.0-darwin-x
 wget https://npm.taobao.org/mirrors/electron/8.2.0/electron-v8.2.0-darwin-x64.zip
 ```
 &emsp;&emsp;再次回到项目里，执行npm i。
+
+5. npm scripts
+```json
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "electron:watch": "nodemon --watch main.js --exec \"electron .\"",
+  "electron:dev": "concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://localhost:3000 && npm run electron:watch\""
+},
+```

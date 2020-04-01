@@ -1,30 +1,53 @@
-# useState
+> const [state, setstate] = useState(initialState)
+
+&emsp;&emsp;在函数组件内部调用useState，会给函数组件添加一些内部state。React会在重复渲染时保留这个state。
+
+# 参数
 ```ts
 function useState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
 
 function useState<S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>];
 ```
-
-# 参数
 &emsp;&emsp;有两种重载形式：
 * 接受一个初始值、或者一个返回初始值的函数
 * 不带任何参数
 
 # 返回值
-&emsp;&emsp;两种重载形式都返回一个元组。包含两个元素，分别表示state和改变state的函数。
-* 如果没有提供任何初始值，那么返回值是
-```ts
-[S | undefined, Dispatch<SetStateAction<S | undefined>>]
+&emsp;&emsp;useState会返回一个有两个值的数组：
+* 第一个值是当前state值xxx
+* 第二个值是更新state的函数setXXX。setXXX类似于class组件的this.setState，但是不会把新的state和旧的state进行合并。
+
+```jsx
+function Example() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div>
+      <p>{count} time</p>
+      <button onClick={() => setCount(count + 1)}>Click me!!!</button>
+    </div>
+  )
+}
 ```
-* 如果提供了初始值，返回值是
-```ts
-[S, Dispatch<SetStateAction<S>>]
+
+# 声明多个变量
+&emsp;&emsp;通过数组解构语法，可以解构出不同名称的变量和方法，可以多次使用useState()添加多个内部状态。
+```jsx
+function Example() {
+  // 声明多个state变量
+  const [count, setCount] = useState(0)
+  const [time, setTime] = useState(0)
+
+  return (
+    <div></div>
+  )
+}
 ```
 
 # 使用typescript注意项
 ### 对state类型约束
 &emsp;&emsp;可以通过useState<S\>这样提供泛型约束，来限制state类型。
-```tsx
+```typescript
 const Color: React.FC = () => {
   const [color, setColor] = useState<'red' | 'blue'>()
   return (
@@ -41,7 +64,7 @@ const Color: React.FC = () => {
 
 ### state操作容错处理
 &emsp;&emsp;如果useState()没有初始值，可能返回undefined，应该对state进行操作可能会报错，需要先做容错处理。
-```tsx
+```ts
 const Color: React.FC = () => {
   const [color, setColor] = useState<'red' | 'blue'>()
   return (
@@ -63,8 +86,8 @@ const Color: React.FC = () => {
 ```
 
 ### useState清除状态
-&emsp;&emsp;如果useState()具有初始值，要向清空state的值，需要确保state可以是undefined
-```tsx
+&emsp;&emsp;如果useState()具有初始值，操作过程中要想清空state的值，需要确保state类型可以是undefined。
+```ts
 const Color: React.FC = () => {
   // 根据类型推断state为string，不能为undefined
   // const [color, setColor] = useState('blue')

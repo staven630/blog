@@ -22,11 +22,11 @@ ipcRenderer.send(eventName, args)
 
 * 主进程 <= 渲染进程：主进程监听事件
 
-&emsp;&emsp;主进程在ipcMain监听回调里，通过event.sender.send(eventName, repleyArgs)响应事件。
+&emsp;&emsp;主进程在ipcMain监听回调里，通过event.reply(eventName, repleyArgs)响应事件。
 ```js
 ipcMain.on(eventName, (event, args) => {
   // 响应事件
-  event.sender.send(eventName, 'repley')
+  event.reply(eventName, 'repley')
 })
 ```
 
@@ -54,7 +54,7 @@ ipcMain.on(eventName, (event, args) => {
 <button id="asyncBtn">异步发送</button>
 <script src="renderer.js"></script>
 ```
-> 渲染进程：enderer.js
+> 渲染进程：renderer.js
 ```js
 const { ipcRenderer } = require('electron')
 
@@ -101,7 +101,7 @@ function createWindow() {
 
   ipcMain.on('asyncSend', (event, args) => {
     console.log('ipcRenderer asyncSend消息:', args);
-    event.sender.send('reply', '主进程收到异步消息')
+    event.reply('reply', '主进程收到异步消息')
   })
 }
 
