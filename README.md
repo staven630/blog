@@ -30,6 +30,7 @@
 * [揭秘vue - vue-router延迟加载及设置chunkName](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20vue-router%E5%BB%B6%E8%BF%9F%E5%8A%A0%E8%BD%BD%E5%8F%8A%E8%AE%BE%E7%BD%AEchunkName.md)
 * [揭秘vue - 利用vue-router中间件解耦权限控制](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20%E5%88%A9%E7%94%A8vue-router%E4%B8%AD%E9%97%B4%E4%BB%B6%E8%A7%A3%E8%80%A6%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6.md)
 * [揭秘vue - Vue单页面应用多布局实践](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20Vue%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8%E5%A4%9A%E5%B8%83%E5%B1%80%E5%AE%9E%E8%B7%B5.md)
+* [揭秘vue - Vue生成web components](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20Vue%E7%94%9F%E6%88%90web%20components.md)
 * [揭秘vue - Vue性能优化](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20Vue%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md)
 * [揭秘vue - Vue+Typescript实践总结](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20Vue+Typescript%E5%AE%9E%E8%B7%B5%E6%80%BB%E7%BB%93.md)
 * [揭秘vue - 深入Vue对象响应式原理](https://github.com/staven630/blog/blob/master/%E6%8F%AD%E7%A7%98vue/%E6%8F%AD%E7%A7%98vue%20-%20%E6%B7%B1%E5%85%A5Vue%E5%AF%B9%E8%B1%A1%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86.md)
