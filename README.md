@@ -99,6 +99,7 @@
 
 ### [🍐 探索ES6](https://github.com/staven630/blog/tree/master/%E6%8E%A2%E7%B4%A2ES6)
 - [ES6带键的集合——Map](https://github.com/staven630/blog/tree/master/%E5%89%8D%E7%AB%AF%E5%BF%8D%E8%80%85%E4%B9%8B%E8%B7%AF/%E6%8E%A2%E7%B4%A2ES6/ES6%E5%B8%A6%E9%94%AE%E7%9A%84%E9%9B%86%E5%90%88%E2%80%94%E2%80%94Map.md)
+- [ES6带键的集合——Set](https://github.com/staven630/blog/blob/master/%E5%89%8D%E7%AB%AF%E5%BF%8D%E8%80%85%E4%B9%8B%E8%B7%AF/%E6%8E%A2%E7%B4%A2ES6/ES6%E5%B8%A6%E9%94%AE%E7%9A%84%E9%9B%86%E5%90%88%E2%80%94%E2%80%94Set.md)
 - [探索ES6——Symbol类型](https://github.com/staven630/blog/blob/master/%E6%8E%A2%E7%B4%A2ES6/%E6%8E%A2%E7%B4%A2ES6%E2%80%94%E2%80%94Symbol%E7%B1%BB%E5%9E%8B.md)
 - [探索ES6——Module 模块](https://github.com/staven630/blog/blob/master/%E6%8E%A2%E7%B4%A2ES6/%E6%8E%A2%E7%B4%A2ES6%E2%80%94%E2%80%94Module%E6%A8%A1%E5%9D%97.md)
 
