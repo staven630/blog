@@ -92,22 +92,6 @@ map.forEach((value, key, map) => {
   console.log(key, value);
 })
 ```
-
-### Map创建相关
-2. Object.entries(obj)
-```js
-const person = {
-  name: "staven",
-  age: 11
-};
-
-let map2 = new Map(Object.entries(person));
-```
-&emsp;&emsp;Object.entries(obj)则从Map得到一个普通的Object对象。
-```js
-console.log(); // {name: "staven", age: 11}
-```
-
 ### Map与其他类型的转换
 1. Array转换为Map
 ```js
