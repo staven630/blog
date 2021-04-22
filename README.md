@@ -125,3 +125,7 @@
 - [小程序获取当前页面信息](https://github.com/staven630/blog/tree/master/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E4%BF%A1%E6%81%AF.md)
 - [小程序实现 1px 细边框](https://github.com/staven630/blog/tree/master/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B01px%E7%BB%86%E8%BE%B9%E6%A1%86.md)
 
+
+# 算法
+### 🍹 排序算法
+* [排序算法——冒泡排序(BubbleSort)](https://github.com/staven630/blog/tree/master/%E7%AE%97%E6%B3%95%E6%8E%A2%E9%99%A9/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F(BubbleSort).md)

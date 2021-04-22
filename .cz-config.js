@@ -38,6 +38,7 @@ module.exports = {
   scopes: [
     { name: '配置文件' },
     { name: '前端忍者之路' },
+    { name: '算法探险' },
     { name: '深究JavaScript' },
     { name: '修炼React' },
     { name: '揭秘Vue' },
