@@ -128,4 +128,4 @@
 
 # 算法
 ### 🍹 排序算法
-* [排序算法——冒泡排序(BubbleSort)](https://github.com/staven630/blog/tree/master/%E7%AE%97%E6%B3%95%E6%8E%A2%E9%99%A9/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F(BubbleSort).md)
+* [排序算法——冒泡排序(BubbleSort)](https://github.com/staven630/blog/blob/master/%E7%AE%97%E6%B3%95%E6%8E%A2%E9%99%A9/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F(BubbleSort%EF%BC%89.md)
