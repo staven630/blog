@@ -44,9 +44,15 @@ packages:
     access: $all
     publish: $authenticated
     unpublish: $authenticated
-    proxy:
-      - npmjs
-      - taobao
+    proxy: taobao
+
+  '*/*':
+    # scoped packages
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+    proxy: taobao
+
 listen: 0.0.0.0:4873
 ```
 ##### 配置防火墙
