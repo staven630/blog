@@ -57,8 +57,11 @@ listen: 0.0.0.0:4873
 ```
 ##### 配置防火墙
 ```bash
-firewall-cmd --permanent --add-port=4873/tcp
-firewall-cmd --reload
+firewall-cmd --state                 # 先查看防火墙状态，
+service firewalld start              # 开启防火墙:
+firewall-cmd --zone=public --permanent --add-port=4873/tcp  # 开放4873端口
+firewall-cmd --reload                # 重新载入
+firewall-cmd --zone=public --query-port=4873/tcp    # 查看是否添加成功
 ```
 
 # 启动
