@@ -1,6 +1,9 @@
 # 配置环境变量
-&emsp;&emsp;NODE_ENV用于表示开发阶段还是build上线。CUSTOM_ENV自定义的环境可以设置不同线上环境，如测试服、预发服与正式服。
-* package.json
+
+&emsp;&emsp;NODE_ENV 用于表示开发阶段还是 build 上线。CUSTOM_ENV 自定义的环境可以设置不同线上环境，如测试服、预发服与正式服。
+
+- package.json
+
 ```
 "scripts": {
   "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
@@ -15,7 +18,9 @@
 ```
 
 # 配置域名
-* nuxt.config.js
+
+- nuxt.config.js
+
 ```
 const IS_PROD = ['production', 'prod'].includes(process.env.CUSTOM_ENV)
 
@@ -34,14 +39,16 @@ module.exports = {
 
   build: {
     publicPath: BASE_API
-      ? 'https://prod.oss.com/staven-blog'
-      : 'https://test.oss.com/staven-blog'
+      ? 'https://prod.oss.com/blog'
+      : 'https://test.oss.com/blog'
   }
 }
 ```
 
 # 上传脚本
-* oss.js
+
+- oss.js
+
 ```
 const fs = require('fs')
 const path = require('path')
@@ -220,33 +227,39 @@ class AliOSS {
   }
 }
 ```
-* oss.test.js
+
+- oss.test.js
+
 ```
 const o = new AliOSS({
   accessKeyId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   accessKeySecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   region: 'oss-cn-hangzhou',
   bucket: 'staven-test',
-  prefix: 'staven-blog',  // 跟nuxt.config.js中build.publicPath的后缀目录保持一致
+  prefix: 'blog',  // 跟nuxt.config.js中build.publicPath的后缀目录保持一致
   exclude: /.*\.html$/,
   output: path.resolve(__dirname, './.nuxt/dist/client/')
 })
 ```
-* oss.prod.js
+
+- oss.prod.js
+
 ```
 const o = new AliOSS({
   accessKeyId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   accessKeySecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   region: 'oss-cn-hangzhou',
   bucket: 'staven-prod',
-  prefix: 'staven-blog',  // 跟nuxt.config.js中build.publicPath的后缀目录保持一致
+  prefix: 'blog',  // 跟nuxt.config.js中build.publicPath的后缀目录保持一致
   exclude: /.*\.html$/,
   output: path.resolve(__dirname, './.nuxt/dist/client/')
 })
 ```
 
-# 使用webpack插件
-&emsp;&emsp;除了上述方法，还可以使用webpack插件
+# 使用 webpack 插件
+
+&emsp;&emsp;除了上述方法，还可以使用 webpack 插件
+
 ```
 npm i -D webpack-oss
 ```
@@ -275,7 +288,7 @@ module.exports = {
         accessKeySecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         region: 'oss-cn-hangzhou',
         bucket: 'staven',
-        prefix: 'staven-blog', // 跟nuxt.config.js中build.publicPath的后缀目录保持一致
+        prefix: 'blog', // 跟nuxt.config.js中build.publicPath的后缀目录保持一致
         exclude: /.*\.html$/,
         output: path.resolve(__dirname, './.nuxt/dist/client/')
       })
