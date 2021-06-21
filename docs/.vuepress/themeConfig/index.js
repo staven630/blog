@@ -15,7 +15,7 @@ module.exports = {
     sidebar,
     lastUpdated: "Last Updated",
     sidebarDepth: 2,
-    repo: "",
+    repo: "https://github.com/staven630/blog",
     editLinks: false,
     footer: {
       createYear: 2021,

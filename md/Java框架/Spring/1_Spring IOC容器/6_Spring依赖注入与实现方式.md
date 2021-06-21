@@ -1,6 +1,8 @@
+## 依赖注入方式
+
 &emsp;&emsp;Spring 中有两种常见的依赖注入方式：属性注入和构造器注入。
 
-## 构造函数注入
+### 构造函数注入
 
 &emsp;&emsp;在 Bean 的配置中，使用 constructor-arg 的子元素配置依赖的对象，对应的 Bean 类需具备对应参数的构造函数。容器反射调用带参数的构造函数进行依赖对象的初始化。
 
@@ -52,7 +54,7 @@ public class UserService {
 
 &emsp;&emsp;constructor-arg 配置子元素对应到构造函数的参数，在 ref 子元素的 bean 属性中设置依赖 bean 的 id。
 
-## 设置值注入
+### 设置值注入
 
 &emsp;&emsp;设置值注入使用的是属性的 setter 方法来注入依赖对象。
 
@@ -92,6 +94,6 @@ public class UserService {
 
 &emsp;&emsp;property 子元素注入依赖对象，name 对应 bean 类中的属性名，ref 设置为依赖 bean 的 id。
 
-## 总结
+### 总结
 
 &emsp;&emsp;Spring 官方推荐使用构造器注入方式。实际项目中，推荐使用构造器注入方式注入强制依赖项，使用设置值方式注入可选依赖项。
