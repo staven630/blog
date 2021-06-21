@@ -69,3 +69,12 @@ package-lock.json
 
 # useless files
 templete
+
+
+!docs/
+
+docs/*
+!docs/.vuepress/
+
+docs/.vuepress/dist
+docs/.vuepress/themeConfig/sidebar.json
