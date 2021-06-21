@@ -14,7 +14,7 @@ module.exports = {
     nav,
     sidebar,
     lastUpdated: "Last Updated",
-    sidebarDepth: 2,
+    sidebarDepth: 0,
     repo: "https://github.com/staven630/blog",
     editLinks: false,
     footer: {
