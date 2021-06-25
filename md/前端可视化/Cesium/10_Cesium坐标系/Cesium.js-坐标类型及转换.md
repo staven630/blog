@@ -10,11 +10,11 @@
 
 &emsp;&emsp;全称为世界大地测量系统(World Geodetic System)是一种用于地图学、大地测量学和导航(包括全球定位系统)的大地测量系统标准。WGS 包含了一套地球的标准经纬坐标系、一个用于计算原始海拔数据的参考椭球体，和一套用以定义海平面高度的引力等势面数据。
 
-![WGS84](./img/wgs84.jpg)
+![WGS84](../img/wgs84.jpg)
 
 &emsp;&emsp;WGS84 坐标是一种地心坐标系，坐标原点为地球质心，其地心空间直角坐标系的 Z 轴指向 BIH（国际时间服务机构）1984.0 定义的协议地球级(CTP)反向，X 轴指向 BIM 1984.0 的零子午面和 CTP 赤道的交点，Y 轴与 Z 轴、X 轴垂直构成右手坐标系。平常手机指南针显示的经纬度就是这个坐标系下的当前坐标。经度范围[-180, 180],纬度范围[-90, 90]。它是航天与远程武器和空间科学中各种定位测控测轨的依据。
 
-![WGS84](./img/wgs84-1.jpg)
+![WGS84](../img/wgs84-1.jpg)
 
 | 参数名                 | 参数值              |
 | :--------------------- | :------------------ |
@@ -30,7 +30,7 @@
 
 &emsp;&emsp;也就是平面直角坐标系，是一个二维笛卡尔坐标系，与 Cartesian3 相比少了一个 z 的分量。Cartesian2 经常用来描述屏幕坐标系，比如鼠标在电脑屏幕上的点击位置，返回的就是 Cartesian2，返回了鼠标点击位置的 xy 像素点分量。
 
-![cartesian2](./img/cartesian2.jpg)
+![cartesian2](../img/cartesian2.jpg)
 
 ```js
 new Cesium.Cartesian2(x, y);
@@ -40,7 +40,7 @@ new Cesium.Cartesian2(x, y);
 
 &emsp;&emsp;笛卡尔空间直角坐标系的原点就是椭球的中心，我们在计算机上进行绘图时，不方便使用经纬度直接进行绘图，一般会将坐标系转换为笛卡尔坐标系，使用计算机图形学中的知识进行绘图。
 
-![cartesian3](./img/cartesian3.jpg)
+![cartesian3](../img/cartesian3.jpg)
 
 ```js
 new Cesium.Cartesian3(x, y, z);

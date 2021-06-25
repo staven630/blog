@@ -20,7 +20,7 @@ module.exports = [
       {
         "text": "前端可视化",
         "items": [
-          {"text": "Cesium.js", "link": "/visual/cesium/vue3.x+cesium.js_kfhjdj"}
+          // {"text": "Cesium", "link": "/visual/cesium/"}
         ]
       },
     ] 

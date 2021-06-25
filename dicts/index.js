@@ -9,7 +9,7 @@ module.exports = {
   '前端资源': 'web-resources',
   '基础类型': 'basic-type',
   'UI框架': 'ui-framework',
-  "Cesium.js": "cesium",
+  "Cesium": "cesium",
   '理论工具': 'thoery',
 
   'Java基础': 'java-base',

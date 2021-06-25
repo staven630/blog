@@ -177,7 +177,8 @@ module.exports = {
 
 <script>
 import { onMounted } from "vue";
-import { createWorldTerrain, Viewer } from "@plugins/cesium";
+import { createWorldTerrain, Viewer } from "cesium";
+import "cesium/Build/Cesium/Widgets/widgets.css";
 
 export default {
   name: "Home",
