@@ -1,3 +1,20 @@
+## cesium 介绍
+
+&emsp;&emsp;[Cesium](https://cesium.com/) 是一款基于 JavaScript 创建虚拟场景的 3D 地理信息地图引擎库，目标是用于创建以
+基于 Web 的地图动态数据可视化框架，cesium 使用 WebGL 来进行硬件加速图形，不需要任何插件支持，并且是跨平台、跨浏览器,并且适应于动态数据可视化，但浏览器必须支持
+webgl。
+
+&emsp;&emsp;Cesium 支持 2D,2.5D,3D 形式的地理（地图）数据展示，可以绘制各种几何图形、高亮区域，支持导入图片，甚至三维模型等多种数据可视化展示可用于动态数据可视化并提供良好的触摸支持，支持绝大多数的浏览器和移动端浏览器。支持基于时间轴的动态流式数据展示。
+
+&emsp;&emsp;Cesium 支持的数据格式：
+
+- 3D Tiles
+- Terrain and Imagery Layers
+- 3D Models（glTF）
+- Vectors and Geometry(Load KML, GeoJSON, TopoJSON, and CZML)
+- Time-Dynamic Visualization
+- 3D, 2D, and 2.5D Columbus View
+
 ## 第一章：cesium 入门基础知识介绍
 
 ### cesium 的基本介绍

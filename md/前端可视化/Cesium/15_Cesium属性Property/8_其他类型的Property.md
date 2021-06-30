@@ -38,3 +38,5 @@ viewer.zoomTo(viewer.entities);
 ```
 
 ![CallbackProperty](../img/CallbackProperty.gif)
+
+[Sandcastle CallbackProperty](https://sandcastle.cesium.com/?src=Callback%20Property.html)
