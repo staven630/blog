@@ -164,31 +164,69 @@ handler.setInputAction((e) => {
 ## 加载自定义图片
 
 ```js
-const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-<foreignObject width="100%" height="100%">
-<div xmlns="http://www.w3.org/1999/xhtml" style="font-size:40px; color: #FF0">
-  <em>I</em> like <span style="color:white; text-shadow:0 0 2px blue;">Cesium</span>
-</div>
-</foreignObject>
-</svg>`;
+const title = "Hello Cesium!";
+const src = "./Cesium_Logo_overlay.png";
 
 const canvas = document.createElement("canvas");
-canvas.width = 300;
-canvas.height = 300;
-
+const ctx = canvas.getContext("2d");
 const image = new Image();
-image.src = `data:image/svg+xml;base64,${window.btoa(svg)}`;
+image.src = src;
+
 image.onload = () => {
-  canvas.getContext("2d").drawImage(image, 0, 0);
-  viewer.entities.add({
-    id: "svg",
+  canvas.width = image.width;
+  canvas.height = image.height;
+  ctx.drawImage(image, 0, 0, image.width, image.height);
+  ctx.font = "bold 20px Atial";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "bottom";
+  ctx.fillStyle = "#ff0000";
+  ctx.fillText(title, 70, 30);
+
+  const entity = viewer.entities.add({
     position: Cesium.Cartesian3.fromDegrees(-75.59777, 40.03883),
     billboard: {
       image: canvas,
     },
-    description: "<p>This is a cupcake that can be modified.</p>",
   });
+  viewer.zoomTo(entity);
 };
+```
+
+## 加载动态 gif
+
+```html
+<img
+  ref="img"
+  src="../../assets/running.gif"
+  rel:auto_play="1"
+  width="467"
+  height="375"
+  rel:rubbable="1"
+/>
+```
+
+```js
+import SuperGif from "libgif";
+
+const rub = new SuperGif({
+  gif: img.value,
+});
+
+rub.load(() => {
+  const entity = viewer.entities.add({
+    position: Cesium.Cartesian3.fromDegrees(120.42867, 31.32425, 20),
+    billboard: {
+      image: new Cesium.CallbackProperty(() => {
+        return rub.get_canvas().toDataURL("image/png");
+      }, false),
+      verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+      heightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
+      scaleByDistance: new Cesium.NearFarScalar(5e2, 1.0, 2e3, 0.1),
+    },
+  });
+
+  viewer.zoomTo(entity);
+});
 ```
 
 ## 处理大量数据
