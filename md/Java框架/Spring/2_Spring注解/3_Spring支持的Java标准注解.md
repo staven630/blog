@@ -18,16 +18,72 @@
 
 ## @PostConstruct 和 @PreDestory
 
-&emsp;&emsp;这两个注解可以用来修饰一个非静态的 void 方法。@PostConstruct 注解的方法会在 Bean 的构造函数之后 init()方法之前执行；@PreDestory 注解的方法会在 destory()方法执行之后执行。
+&emsp;&emsp;如果在 Java 9 或更高版本中使用此注释，则必须显式地将此 jar 添加到您的项目中。
+
+```xml
+
+<dependency>
+	<groupId>javax.annotation</groupId>
+	<artifactId>javax.annotation-api</artifactId>
+	<version>1.3.2</version>
+</dependency>
+```
+
+### @PostConstruct
+
+&emsp;&emsp;Spring 只调用一次 @PostConstruct 注释的方法，在 Bean 的构造函数的初始化之后执行。即使没有要初始化的内容，这些方法也会运行。
+
+&emsp;&emsp;@PostConstruct 注释的方法可以有任何访问级别，但不能是静态的。
 
 ```java
-public class LifeCycleCallbackAnno { //定义一个使用注解的类
-    @PostConstruct // 该注解方法在该类示例初始化时调用
-    public void startAnno() {
+@Component
+public class DbInit {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @PostConstruct
+    private void postConstruct() {
+        User admin = new User("admin", "admin password");
+        User normalUser = new User("user", "user password");
+        userRepository.save(admin, normalUser);
+    }
+}
+```
+
+&emsp;&emsp;如果 Bean A 需要注入 Bean P，首先就必须得生成 Bean A 和 Bean P，才能执行注入。如果使用@Autowired 注解 Bean P，@Autowired 注入是发生在 A 构造方法执行完之后的。如果在初始化 Bean A 时，要同时完成某些操作，由于在构造方法中无法创建 Bean P，可以使用@PostConstruct 注解完成自动调用。
+
+```java
+public class A {
+    @Autowired
+    private P p;
+
+    public A() {
+        System.out.printIn("此时Bean p并未被注入!");
     }
 
-    @PreDestroy // 该注解方法在类实例销毁时调用
-    public void endAnno() {
+    @PostConstruct
+    public void init() {
+        System.out.printIn("@PostConstruct将在依赖注入完成后被自动调用");
+    }
+}
+```
+
+### @PreDestory
+
+&emsp;&emsp;与@PostConstruct 相同，使用@PreDestroy 注释的方法可以具有任何访问级别，但不能是静态的。
+
+&emsp;&emsp;@PreDestory 注解的方法会在 destory()方法执行之后执行。主要用于在 bean 被销毁之前释放资源或执行任何清理任务，例如关闭数据库连接。
+
+```java
+@Component
+public class UserRepository {
+
+    private DbConnection dbConnection;
+
+    @PreDestroy
+    public void preDestroy() {
+        dbConnection.close();
     }
 }
 ```
@@ -86,25 +142,37 @@ public class ResourceAnno {
 
 ## @Inject
 
+&emsp;&emsp;@Inject 用于自动装配，它让您有机会使用标准注解，而不是像 @Autowired 这样的 Spring 特定注解。如果有多个相同类型的候选者，则使用 @Named 注释来解决冲突。
+
 &emsp;&emsp;@Inject 可以使用在构造函数、属性和属性的 setter 方法上，用来注入依赖对象。
 
 ```java
-public class InjectNamedAnno {
-    private Foo foo;
-    private Baz baz;
+public interface OrderService { interface OrderService {
+  public void buyItems();
+}}
 
-    @Inject
-    public InjectNamedAnno(@Named("foo") Foo foo){
-        this.foo = foo;
-    }
 
-    @Inject
-    private Bar bar;
+@Service
+public class OrderServiceImpl implements OrderService {
+  private IStore store;private IStore store;
 
-    @Inject
-    public void setBaz(Baz baz) {
-        this.baz = baz;
-    }
+  @Inject
+  private IStore store;
+
+  @Inject
+  public OrderServiceImpl(IStore store){
+    this.store = store;
+  }
+
+  // Autowiring on Setter
+  @Inject
+  public void setStore(IStore store) {
+    this.store = store;this.store = store;
+  }
+
+  public void buyItems() {
+    store.doPurchase();.
+  }
 }
 ```
 
