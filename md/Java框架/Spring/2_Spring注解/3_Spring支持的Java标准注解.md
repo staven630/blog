@@ -51,15 +51,15 @@ public class DbInit {
 }
 ```
 
-&emsp;&emsp;如果 Bean A 需要注入 Bean P，首先就必须得生成 Bean A 和 Bean P，才能执行注入。如果使用@Autowired 注解 Bean P，@Autowired 注入是发生在 A 构造方法执行完之后的。如果在初始化 Bean A 时，要同时完成某些操作，由于在构造方法中无法创建 Bean P，可以使用@PostConstruct 注解完成自动调用。
+&emsp;&emsp;如果 Bean A 需要注入 Bean B，首先就必须得生成 Bean A 和 Bean B，才能执行注入。如果使用@Autowired 注解 Bean B，@Autowired 注入是发生在 A 构造方法执行完之后的。如果在初始化 Bean A 时，要同时完成某些操作，由于在构造方法中无法创建 Bean B，可以使用@PostConstruct 注解完成自动调用。
 
 ```java
 public class A {
     @Autowired
-    private P p;
+    private B b;
 
     public A() {
-        System.out.printIn("此时Bean p并未被注入!");
+        System.out.printIn("此时Bean B并未被注入!");
     }
 
     @PostConstruct
@@ -112,7 +112,7 @@ public class NamedBeanAnno {
 
 ## @Resource
 
-&emsp;&emsp;用来标注系统或容器中资源类型的对象引用，包括持久层访问对象资源(DAO)、文件或容器等资源。可以使用在属性和属性的 setter 方法上。
+&emsp;&emsp;这是 JSR250 规范的实现，通过 CommonAnnotationBeanPostProcessor 类实现依赖注入。用来标注系统或容器中资源类型的对象引用，包括持久层访问对象资源(DAO)、文件或容器等资源。可以使用在属性和属性的 setter 方法上。
 
 ```java
 public class ResourceAnno {
@@ -131,7 +131,7 @@ public class ResourceAnno {
 }
 ```
 
-&emsp;&emsp;@Resource 注解的属性或 setter 方法，默认会以属性名或 setter 方法参数名去查找容器中的对象，如果没找到，则使用类来查找和注入。也可以显示第使用属性 name 来查找指定名称的 Bean 的实例。
+&emsp;&emsp;@Resource 注解的属性或 setter 方法，默认会以属性名或 setter 方法参数名去查找容器中的对象，如果没找到，则使用类来查找和注入。也可以显示地使用属性 name 来查找指定名称的 Bean 的实例。
 
 ```java
 public class ResourceAnno {
@@ -142,36 +142,48 @@ public class ResourceAnno {
 
 ## @Inject
 
-&emsp;&emsp;@Inject 用于自动装配，它让您有机会使用标准注解，而不是像 @Autowired 这样的 Spring 特定注解。如果有多个相同类型的候选者，则使用 @Named 注释来解决冲突。
+&emsp;&emsp;@Inject 是 JSR330 中的规范，通过 AutowiredAnnotationBeanPostProcessor 类实现的依赖注入，用于自动装配。
+
+&emsp;&emsp;如果有多个相同类型的 Bean，则使用 @Named 注释来解决冲突。
 
 &emsp;&emsp;@Inject 可以使用在构造函数、属性和属性的 setter 方法上，用来注入依赖对象。
 
+1. 在属性上注解
+
+- 属性不能是 final 的
+- 拥有一个合法的名称
+
+2. 在方法上注解
+
+- 不能是抽象方法
+- 不能声明自身参数类型
+- 可以由返回结果
+- 拥有一个合法的名称
+- 可以有 0 个或多个参数
+
 ```java
-public interface OrderService { interface OrderService {
-  public void buyItems();
-}}
+public interface ProductService {
+  public void buy();
+}
 
 
 @Service
-public class OrderServiceImpl implements OrderService {
-  private IStore store;private IStore store;
-
-  @Inject
+public class ProductServiceImpl implements ProductService {
+  @Inject // 属性注解
   private IStore store;
 
-  @Inject
-  public OrderServiceImpl(IStore store){
+  @Inject // 构造函数注解
+  public ProductServiceImpl(IStore store){
     this.store = store;
   }
 
-  // Autowiring on Setter
-  @Inject
+  @Inject // setter方法注解
   public void setStore(IStore store) {
     this.store = store;this.store = store;
   }
 
-  public void buyItems() {
-    store.doPurchase();.
+  public void buy() {
+    store.doPurchase();
   }
 }
 ```
@@ -186,3 +198,39 @@ public void setBaz(@Named("baz") Baz baz) {
 ```
 
 &emsp;&emsp;如果 Bean 没有找到，则容器初始化时会抛出 UnsatisfiedDependencyException 的异常提示。
+
+## @Autowired、@Inject、@Resource 异同
+
+&emsp;&emsp;@Autowired 和@Inject 基本是一样的，因为两者都是使用 AutowiredAnnotationBeanPostProcessor 来处理依赖注入。但是@Resource 是个例外，它使用的是 CommonAnnotationBeanPostProcessor 来处理依赖注入。当然，两者都是 BeanPostProcessor。
+
+### @Autowired 和@Inject
+
+&emsp;&emsp;默认 autowired by type，可以通过@Qualifier 显式指定 autowired by qualifier name。
+
+&emsp;&emsp;使用@Autowired 生成依赖注入时，必须生成相应类的 set 方法，然后使用@Autowired 注解在 setter 方法上，才能实现依赖注入。
+
+```java
+@Controller
+public class ProductController {
+    private ProductService productService;
+
+     @Autowired
+     public void setProjectService(ProductService productService) {
+         this.productService = productService;
+     }
+ }
+```
+
+&emsp;&emsp;如果我们使用 javax.inject.jar，只需要在相应类的属性上面加上@Inject：
+
+```java
+@Controller
+public class ProductController {
+    @Inject
+    private ProductService productService;
+}
+```
+
+### @Resource
+
+&emsp;&emsp;默认 autowired by field name，如果 autowired by field name 失败，会退化为 autowired by type，可以通过@Qualifier 显式指定 autowired by qualifier name，如果 autowired by qualifier name 失败，会退化为 autowired by field name。但是这时候如果 autowired by field name 失败，就不会再退化为 autowired by type。
