@@ -1,6 +1,6 @@
 - [WallGraphics](https://staven630.github.io/cesium-doc-zh/WallGraphics.html)
 
-## 特性
+## 属性
 
 | 名称                     | 类型                                                                                                                                                                       | 是否必填 | 默认值                         | 描述                                               |
 | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- | :----------------------------- | :------------------------------------------------- |
@@ -18,8 +18,6 @@
 | distanceDisplayCondition | [Property](https://staven630.github.io/cesium-doc-zh/Property.html) \| [DistanceDisplayCondition](https://staven630.github.io/cesium-doc-zh/DistanceDisplayCondition.html) | <可选>   |                                | 指定在离相机多远的地方显示这面墙。                 |
 
 ```js
-const viewer = new Cesium.Viewer("cesiumContainer");
-
 const redWall = viewer.entities.add({
   name: "Red Wall",
   wall: {
@@ -107,8 +105,6 @@ const blueWall = viewer.entities.add({
     outlineColor: Cesium.Color.BLACK,
   },
 });
-
-viewer.zoomTo(viewer.entities);
 ```
 
 - [Cesium Sandcastle Wall Demo](https://sandcastle.cesium.com/index.html)
