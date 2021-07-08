@@ -34,7 +34,7 @@ public class WebBean {
 
 ```java
 @Configuration
-@ComponentScan(basePackages = "com.staven.chp05.entity")
+@ComponentScan(basePackages = "com.staven.anno.entity")
 public class TestConfiguration {
     public TestConfiguration() {
         System.out.println("TestConfiguration容器启动初始化...");
@@ -50,6 +50,7 @@ public class TestConfiguration {
         WebBean webBean() {
             return new WebBean();
         }
+
     }
 }
 ```
