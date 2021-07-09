@@ -8,88 +8,6 @@
 2. @Configuration 不可以是匿名类
 3. 嵌套的@Configuration 必须是静态类
 
-> TestBean.java
-
-```java
-@Component
-public class TestBean {
-    public void sayHello() {
-        System.out.println("TestBean sayHello...");
-    }
-}
-```
-
-> WebBean.java
-
-```java
-@Component
-public class WebBean {
-    public void sayHello() {
-        System.out.println("WebBean sayHello...");
-    }
-}
-```
-
-> TestConfiguration.java
-
-```java
-@Configuration
-@ComponentScan(basePackages = "com.staven.anno.entity")
-public class TestConfiguration {
-    public TestConfiguration() {
-        System.out.println("TestConfiguration容器启动初始化...");
-    }
-
-    @Configuration
-    static class WebConfiguration {
-        public WebConfiguration() {
-            System.out.println("WebConfiguration容器启动初始化...");
-        }
-
-        @Bean
-        WebBean webBean() {
-            return new WebBean();
-        }
-
-    }
-}
-```
-
-> TestMain.java
-
-```java
-public class TestMain {
-    public static void main(String[] args) {
-        ApplicationContext context =
-                new AnnotationConfigApplicationContext(TestConfiguration.class);
-
-        TestBean testBean = (TestBean) context.getBean("testBean");
-        testBean.sayHello();
-
-        WebBean webBean = (WebBean) context.getBean("webBean");
-        webBean.sayHello();
-    }
-}
-```
-
-### @configuration 嵌套
-
-&emsp;&emsp;嵌套的@Configuration 必须是静态类。
-
-> WebBean.java
-
-```java
-public class WebBean {
-    public void running() {
-        System.out.println("WebBean is Running!");
-    }
-}
-```
-
-&emsp;&emsp;运行 TestMain.java，可以看到 Spring 容器已经启动了：
-
-![configuration0](../img/configuration_0.png)
-
 ## JavaConfig 的容器初始化
 
 &emsp;&emsp;XML 配置的容器初始化需要借助 ClassPathXmlApplicationContext、FileSystemXmlApplicationContext 或 GenericXmlApplicationContext 类来读取配置文件并初始化。
@@ -328,3 +246,85 @@ public class TestMain {
 ![configuration4](../img/configuration_4.png)
 
 &emsp;&emsp;@ComponentScan 与@Import 都可以接受任意@Component 或@Configuration 类。另外使用@ImportResource 还可以导入 XML 的配置文件。
+
+## @configuration 嵌套
+
+&emsp;&emsp;嵌套的@Configuration 必须是静态类。
+
+> TestBean.java
+
+```java
+@Component
+public class TestBean {
+    public void sayHello() {
+        System.out.println("TestBean sayHello...");
+    }
+}
+```
+
+> WebBean.java
+
+```java
+@Component
+public class WebBean {
+    public void sayHello() {
+        System.out.println("WebBean sayHello...");
+    }
+}
+```
+
+> TestConfiguration.java
+
+```java
+@Configuration
+@ComponentScan(basePackages = "com.staven.anno.entity")
+public class TestConfiguration {
+    public TestConfiguration() {
+        System.out.println("TestConfiguration容器启动初始化...");
+    }
+
+    @Configuration
+    static class WebConfiguration {
+        public WebConfiguration() {
+            System.out.println("WebConfiguration容器启动初始化...");
+        }
+
+        @Bean
+        WebBean webBean() {
+            return new WebBean();
+        }
+
+    }
+}
+```
+
+> TestMain.java
+
+```java
+public class TestMain {
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext(TestConfiguration.class);
+
+        TestBean testBean = (TestBean) context.getBean("testBean");
+        testBean.sayHello();
+
+        WebBean webBean = (WebBean) context.getBean("webBean");
+        webBean.sayHello();
+    }
+}
+```
+
+> WebBean.java
+
+```java
+public class WebBean {
+    public void running() {
+        System.out.println("WebBean is Running!");
+    }
+}
+```
+
+&emsp;&emsp;运行 TestMain.java，可以看到 Spring 容器已经启动了：
+
+![configuration0](../img/configuration_0.png)

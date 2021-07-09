@@ -105,4 +105,6 @@ const blueWall = viewer.entities.add({
 });
 ```
 
+## 示例
+
 - [Cesium Sandcastle Wall Demo](https://sandcastle.cesium.com/index.html)

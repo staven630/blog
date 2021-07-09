@@ -68,5 +68,7 @@ viewer.entities.add({
 viewer.zoomTo(viewer.entities);
 ```
 
+## 示例
+
 - [Cesium Sandcastle Rectangle Demo](https://sandcastle.cesium.com/?src=Rectangle.html)
 - [Draw a rectangle in Cesium with shift-click-drag](https://gist.github.com/theplatapi/0a7d789afc8028a3c20b)

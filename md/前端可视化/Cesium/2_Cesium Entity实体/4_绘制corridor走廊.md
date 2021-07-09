@@ -155,4 +155,6 @@ scene.primitives.add(
 );
 ```
 
+## 示例
+
 [Sandcastle Corridor](https://sandcastle.cesium.com/index.html?src=Corridor.html)

@@ -50,4 +50,6 @@ const outlineOnly = viewer.entities.add({
 viewer.zoomTo(viewer.entities);
 ```
 
+## 示例
+
 [Sandcastle Box](https://sandcastle.cesium.com/index.html?src=Box.html)
