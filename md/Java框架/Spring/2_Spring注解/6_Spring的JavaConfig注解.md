@@ -66,11 +66,14 @@ public class TestMain {
 &emsp;&emsp;@Bean 配置使用注意点：
 
 1. @Bean 注解的方法不能是 private 或 final。
-2. @Bean 注解在返回实例的方法上，如果未通过@Bean 指定 bean 的名称，摸摸人用于标注的方法名相同。
-3. @Bean 注解默认作用域为单例 singleton 作用域，可通过@Scope("prototype")设置为原型作用域。
-4. 既然@Bean 的作用是注册 bean 对象，那么完全可以使用@Component、@Controller、@Service、@Ripository 等注解注册 bean，当然需要配置@ComponentScan 注解进行自动扫描。
-5. @Bean 注解虽然也可以用在@Component 注解的方法或其他的普通方法中，但是使用在@Configuration 注解类中是更为常见和推荐的用法。
-6. 使用在@Configuration 注解类中的@Bean 注解方法不能定义 Bean 间的依赖关系，如果定义在非@Configuration 注解类的依赖关系中，则有可能被当做一般的方法被调用，而不是用来作为 Bean 定义的方法。
+2. @Bean 注解的方法需要有非空的返回类型，返回的对象就是注册 Bean 的对象。该注解只有在其方法对象的类被注册为 Bean 的状况下才有效（该 class 可以通过@Configuation、@Component 或 XML 配置）。
+3. @Bean 可以是使用 name 属性指定名称，value 属性指定别名。
+4. @Bean 在执行@Bean 注解方法实例化 Bean 时，如果该方法有参数，则容器会根据参数查找 Bean 并作为依赖项进行注入，没好到，则容器启动失败。
+5. @Bean 注解默认作用域为单例 singleton 作用域，可通过@Scope("prototype")设置为原型作用域。
+6. 可以通过@Description 注解对该 Bean 做一些详细的描述。
+7. 既然@Bean 的作用是注册 bean 对象，那么完全可以使用@Component、@Controller、@Service、@Ripository 等注解注册 bean，当然需要配置@ComponentScan 注解进行自动扫描。
+8. @Bean 注解虽然也可以用在@Component 注解的方法或其他的普通方法中，但是使用在@Configuration 注解类中是更为常见和推荐的用法。
+9. 使用在@Configuration 注解类中的@Bean 注解方法不能定义 Bean 间的依赖关系，如果定义在非@Configuration 注解类的依赖关系中，则有可能被当做一般的方法被调用，而不是用来作为 Bean 定义的方法。
 
 > TestConfiguration.java
 

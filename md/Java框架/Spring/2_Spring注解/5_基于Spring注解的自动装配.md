@@ -2,7 +2,9 @@
 
 &emsp;&emsp;@Autowired 注解可以使用在类构造器、属性和属性 Setter 方法甚至一般的方法上，也可以混合使用。
 
-### 构造器中使用@Autowired
+### Setter 方法中的@Autowired
+
+&emsp;&emsp;@Autowired 注解可以在 setter 方法上，会在方法中执行 byType 自动装配。
 
 > User.java
 
@@ -51,6 +53,8 @@ public class UserMain {
 }
 ```
 
+&emsp;&emsp;使用@Autowired 自动装配注解后，在 XML 中的配置不需要在处理依赖关系，只需要配置 Bean 实例即可。
+
 > applicationContext.xml
 
 ```xml
@@ -65,9 +69,32 @@ public class UserMain {
     <bean id="user" class="com.staven.anno.User" />
     <bean id="userService" class="com.staven.anno.UserService" />
 </beans>
-
-
 ```
+
+&emsp;&emsp;@Autowired 可以使用在属性的 Setter 方法中，也可以用在一般的方法中。即使一般方法没有被调用，容器也会将依赖对象注入。
+
+### 构造器中使用@Autowired
+
+> UserService.java
+
+```java
+public class UserService {
+    private User user;
+
+    @Autowired
+    public UserService(User user) {
+        this.user = user;
+    }
+
+    public void say() {
+        user.sayHello();
+    }
+}
+```
+
+&emsp;&emsp;建议保持构造器的参数名和需要注入的依赖的 Bean 名称一致。
+
+&emsp;&emsp;从 Spring4.3 开始，如果该 Bean 类只有一个构造器，且包含参数的状况下，不加@Autowired 注解，容器也会自动查找对象并注入。如果存在多个构造器，需要在其中一个构造器上添加@Autowired 注解。
 
 ### 属性中使用@Autowired
 
@@ -82,24 +109,7 @@ public class UserService {
 }
 ```
 
-### Setter 方法中的@Autowired
-
-&emsp;&emsp;@Autowired 注解可以在 setter 方法上，会在方法中执行 byType 自动装配。
-
-```java
-public class UserService {
-    private User user;
-
-    @Autowired
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public User getUser() {
-        return user;
-    }
-}
-```
+&emsp;&emsp;@Autowired 可以使用在任何作用域，无论是 public、protected 还是 private 修饰的属性上。
 
 ### required 属性
 
@@ -123,7 +133,11 @@ public void setFoo(@Nullable Foo foo) {
 }
 ```
 
-## @Primary
+## Autowired 消除分歧
+
+&emsp;&emsp;默认情况下，Spring 按类型解析@Autowired 条目。如果容器中存在多个相同类型的 bean，框架将抛出 ​​ 一个致命异常。为了解决这个冲突，我们需要明确地告诉 Spring 我们想要注入哪个 bean。
+
+### @Primary
 
 &emsp;&emsp;@Autowired 默认根据类来查找和注入容器中的对象，如果存在同一个类的多个 Bean 实例被容器管理的状况，在使用@Autowired 装配该类的依赖对象时会报 UnsatisfiedDependencyException 的异常，提示 expected single matching bean but found X,容器初始化失败。可以在该类的某个 Bean 的配置中设置该 Bean 作为依赖注入的主候选项解决此问题，对应 XML 配置和 Java 注解配置的方式分别为：
 
@@ -143,7 +157,7 @@ public User secondUser() {
 }
 ```
 
-## @Qualifier
+### @Qualifier
 
 &emsp;&emsp;使用@Qualifier 和@Autowired 根据 Bean 的名字来查找依赖对象，进行细粒度的配置。
 
