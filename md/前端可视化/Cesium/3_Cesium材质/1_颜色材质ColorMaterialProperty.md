@@ -1,5 +1,9 @@
 ## 颜色材质：[ColorMaterialProperty](https://staven630.github.io/cesium-doc-zh/ColorMaterialProperty.html)
 
+| 名称  | 类型                                                                                                                                 | 默认值      | 是否可选 | 描述                |
+| :---- | :----------------------------------------------------------------------------------------------------------------------------------- | :---------- | :------- | ------------------- |
+| color | [Property](https://staven630.github.io/cesium-doc-zh/Property.html) \| [Color](https://staven630.github.io/cesium-doc-zh/Color.html) | Color.white | 可选     | 要使用的 Color 属性 |
+
 ```js
 const colorProperty = new Cesium.SampledProperty(Cesium.Color);
 

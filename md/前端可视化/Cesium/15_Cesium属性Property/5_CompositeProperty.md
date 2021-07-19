@@ -66,4 +66,4 @@ compositeProperty.intervals.addInterval(
 );
 ```
 
-![CompositeProperty](../img/CompositeProperty.gif)
+![CompositeProperty_1](../img/CompositeProperty_1.gif)
