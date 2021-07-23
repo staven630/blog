@@ -17,3 +17,15 @@ viewer._cesiumWidget._creditContainer.style.display = "none";
 ```js
 viewer.scene.globe.depthTestAgainstTerrain = true;
 ```
+
+- 启用光照
+
+```js
+viewer.scene.globe.enableLighting = true;
+```
+
+- 禁止缩放
+
+```js
+viewer.scene.screenSpaceCameraController.enableZoom = false;
+```

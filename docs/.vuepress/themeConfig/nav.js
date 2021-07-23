@@ -20,7 +20,7 @@ module.exports = [
       {
         "text": "前端可视化",
         "items": [
-          // {"text": "Cesium", "link": "/visual/cesium/"}
+          {"text": "Cesium", "link": "/visual/cesium/"}
         ]
       },
     ] 

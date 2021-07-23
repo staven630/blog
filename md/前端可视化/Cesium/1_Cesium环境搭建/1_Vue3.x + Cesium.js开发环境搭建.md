@@ -22,49 +22,46 @@ npm i -D strip-pragma-loader hard-source-webpack-plugin
 
 ```js
 const path = require("path");
+const fs = require("fs");
 const webpack = require("webpack");
-
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 
-const resolve = (dir) => path.resolve(__dirname, dir);
 const IS_PROD = ["prod", "production"].includes(process.env.NODE_ENV);
+const cesiumSource = "./node_modules/cesium/Source";
 
-const cesiumSource = "node_modules/cesium/Source";
-const cesiumWorkers = "../Build/Cesium/Workers";
-const cesiumThirdParty = "../Build/Cesium/ThirdParty";
-const cesiumAssets = "../Build/Cesium/Assets";
-const cesiumWidgets = "../Build/Cesium/Widgets";
+// const { PROJECT_NAME } = process.env.VUE_APP_PROJECT_NAME || "";
 
-const cesiumResolve = (dir) => path.resolve(cesiumSource, dir);
+const resolve = (dir) => path.resolve(__dirname, dir);
 
 module.exports = {
   configureWebpack: () => {
     const plugins = [
-      new HardSourceWebpackPlugin(),
+      // new HardSourceWebpackPlugin(),
       new CopyWebpackPlugin([
-        { from: cesiumResolve(cesiumWorkers), to: "cesium/Workers" },
+        { from: path.join(cesiumSource, "Workers"), to: "cesium/Workers" },
       ]),
       new CopyWebpackPlugin([
-        { from: cesiumResolve(cesiumThirdParty), to: "cesium/ThirdParty" },
+        { from: path.join(cesiumSource, "Assets"), to: "cesium/Assets" },
       ]),
       new CopyWebpackPlugin([
-        { from: cesiumResolve(cesiumAssets), to: "cesium/Assets" },
+        {
+          from: path.join(cesiumSource, "ThirdParty"),
+          to: "cesium/ThirdParty",
+        },
       ]),
       new CopyWebpackPlugin([
-        { from: cesiumResolve(cesiumWidgets), to: "cesium/Widgets" },
+        { from: path.join(cesiumSource, "Widgets"), to: "cesium/Widgets" },
       ]),
       new webpack.DefinePlugin({
-        // Define relative base path in cesium for loading assets
         CESIUM_BASE_URL: JSON.stringify("./cesium"),
       }),
     ];
 
     const module = {
       unknownContextCritical: false,
-      // unknownContextRegExp: /^.\/.*$/,
       unknownContextRegExp: /\/cesium\/Source\/Core\/buildModuleUrl\.js/,
       rules: [
         {
@@ -73,7 +70,6 @@ module.exports = {
           use: ["url-loader"],
         },
         {
-          // Strip cesium pragmas
           test: /\.js$/,
           enforce: "pre",
           include: resolve(cesiumSource),
@@ -94,40 +90,48 @@ module.exports = {
 
     const optimization = {
       usedExports: true,
-      sideEffects: true,
       splitChunks: {
-        chunks: "all",
+        maxInitialRequests: Infinity,
+        minSize: 0,
+        maxSize: 250000,
         cacheGroups: {
-          commons: {
-            name: "common", // 打包后的文件名
-            chunks: "all", //
-            minChunks: 2,
-            maxInitialRequests: 5,
-            minSize: 0,
-            priority: 1,
-          },
           vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            chunks: "all",
             name(module) {
               const packageName = module.context.match(
                 /[\\/]node_modules[\\/](.*?)([\\/]|$)/
               )[1];
-              return `${packageName.replace("@", "")}`;
+              return `npm.${packageName.replace("@", "")}`;
             },
-            test: /[\\/]node_modules[\\/]/,
-            priority: 10,
-            chunks: "initial",
           },
-          cesium: {
-            name: "cesium",
+          commons: {
+            name: "Cesium",
             test: /[\\/]node_modules[\\/]cesium/,
-            priority: 30,
-            reuseExistingChunk: true,
+            priority: 10,
+            chunks: "all",
           },
         },
       },
     };
 
     const config = {
+      output: {
+        sourcePrefix: "",
+      },
+      amd: {
+        toUrlUndefined: true,
+      },
+      // resolve: {
+      //   alias: {
+      //     "@": resolve("src"),
+      //     cesium: resolve(cesiumSource),
+      //   },
+      // },
+      node: {
+        fs: "empty",
+      },
       plugins,
       module,
     };
@@ -139,15 +143,44 @@ module.exports = {
     return config;
   },
   chainWebpack: (config) => {
+    config.plugins.delete("preload");
+    config.plugins.delete("prefetch");
+
     config.resolve.symlinks(true);
 
-    // 添加别名
     config.resolve.alias.set("@", resolve("src"));
+    // .set("cesium", path.resolve(__dirname, cesiumSource));
+
+    config.plugin("html").tap((args) => {
+      args[0].chunksSortMode = "none";
+      // args[0].title = PROJECT_NAME;
+      // args[0].cdn = cdnOptions;
+      return args;
+    });
+
+    config
+      .plugin("ignore")
+      .use(
+        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn$/)
+      );
+
+    const svgRule = config.module.rule("svg");
+    svgRule.uses.clear();
+    svgRule
+      .oneOf("inline")
+      .resourceQuery(/inline/)
+      .use("vue-svg-icon-loader")
+      .loader("vue-svg-icon-loader")
+      .end()
+      .end()
+      .oneOf("external")
+      .use("file-loader")
+      .loader("file-loader")
+      .options({
+        name: "assets/[name].[hash:8].[ext]",
+      });
 
     if (IS_PROD) {
-      config.plugins.delete("preload");
-      config.plugins.delete("prefetch");
-
       config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
         {
           analyzerMode: "static",
@@ -155,16 +188,34 @@ module.exports = {
       ]);
     }
   },
-  css: {
-    extract: IS_PROD,
-    sourceMap: false,
+  devServer: {
+    hot: true,
+    port: 8001,
+    // open: true,
+    compress: true,
+    // noInfo: false,
+    disableHostCheck: true,
+    // overlay: {
+    //   warnings: true,
+    //   errors: true,
+    // },
+    // proxy: {
+    //   "/api": {
+    //     target: process.env.VUE_APP_BASE_API,
+    //     secure: false,
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       "^/api": "/",
+    //     },
+    //   },
+    // },
   },
-  transpileDependencies: [],
   lintOnSave: false,
   runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
   productionSourceMap: !IS_PROD, // 生产环境的 source map
   parallel: require("os").cpus().length > 1,
   pwa: {},
+  transpileDependencies: [],
 };
 ```
 
