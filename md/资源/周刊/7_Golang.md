@@ -1,0 +1,3 @@
+- [Golang Weekly](https://golangweekly.com/issues)
+- [The Go Gazelle | Revue](http://www.go-gazelle.com/)
+- [A Semana Go | Revue](https://www.getrevue.co/profile/a-semana-go)

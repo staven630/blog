@@ -17,6 +17,10 @@ module.exports = {
   'Java资源': 'java-resources',
 
   '资源': 'resources',
+  '周刊': 'weekly',
+  '移动开发': 'app',
+  '设计': 'design',
+  '停更': 'stop',
   '其他': 'other',
   '错误收集': 'errors',
   '网站': 'website',

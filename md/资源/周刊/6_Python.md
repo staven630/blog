@@ -1,0 +1,8 @@
+- [Python Weekly](http://us2.campaign-archive2.com/home/?u=e2e180baf855ac797ef407fc7&id=9e26887fc5)
+- [PyCoder’s Weekly](https://pycoders.com/issues)
+- [DjangoWeekly](http://djangoweekly.com/newsletter/)
+- [Python Weekly](https://www.pythonweekly.com/archive/)
+- [Python Bytes Podcast](https://pythonbytes.fm/episodes/all)
+- [蠎周刊](http://weekly.pychina.org/)
+- [ImportPython Weekly Newsletter](https://importpython.com/newsletter/archive/)
+- [Awesome Python Newsletter](https://python.libhunt.com/newsletter/archive)
