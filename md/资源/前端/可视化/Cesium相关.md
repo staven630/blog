@@ -8,6 +8,11 @@
 - [CelesTrak](http://www.celestrak.com/)：获取卫星星历
 - [orbitalpredictor](http://www.orbitalpredictor.com/)：地球观测的轨道预测
 
+# 库
+
+- [predict](https://github.com/nsat/jspredict)
+- [satellite-js](https://github.com/shashwatak/satellite-js)
+
 # 插件
 
 - [viewerCesiumNavigationMixin](https://github.com/solocao/viewerCesiumNavigationMixin)：Cesium 罗盘、指南针

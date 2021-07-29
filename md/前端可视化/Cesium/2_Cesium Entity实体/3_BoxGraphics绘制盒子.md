@@ -14,10 +14,10 @@
 | distanceDisplayCondition | [Property](https://staven630.github.io/cesium-doc-zh/Property.html) \| [DistanceDisplayCondition](https://staven630.github.io/cesium-doc-zh/DistanceDisplayCondition.html) | <可选>   |                      | 指定在离相机多远的地方显示此框。               |
 
 ```js
-viewer = new Cesium.Viewer("cesiumContainer");
+const viewer = new Cesium.Viewer("cesiumContainer");
 
-const blueBox = viewer.entities.add({
-  name: "blue box",
+viewer.entities.add({
+  name: "Blue Box",
   position: Cesium.Cartesian3.fromDegrees(-114.0, 40.0, 300000.0),
   box: {
     dimensions: new Cesium.Cartesian3(400000.0, 300000.0, 500000.0),
@@ -25,8 +25,8 @@ const blueBox = viewer.entities.add({
   },
 });
 
-const redBox = viewer.entities.add({
-  name: "red box",
+viewer.entities.add({
+  name: "Red Box",
   position: Cesium.Cartesian3.fromDegrees(-107.0, 40.0, 300000.0),
   box: {
     dimensions: new Cesium.Cartesian3(400000.0, 300000.0, 500000.0),
@@ -36,8 +36,8 @@ const redBox = viewer.entities.add({
   },
 });
 
-const outlineOnly = viewer.entities.add({
-  name: "yellow outline",
+viewer.entities.add({
+  name: "Yellow Box",
   position: Cesium.Cartesian3.fromDegrees(-100.0, 40.0, 300000.0),
   box: {
     dimensions: new Cesium.Cartesian3(400000.0, 300000.0, 500000.0),
@@ -49,6 +49,8 @@ const outlineOnly = viewer.entities.add({
 
 viewer.zoomTo(viewer.entities);
 ```
+
+![boxGraphics_1.png](../img/boxGraphics_1.png)
 
 ## 示例
 
