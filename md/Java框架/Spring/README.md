@@ -129,3 +129,16 @@
 | Web | spring-web | 客户端及 Web 远程调用 |
 | WebSocket | spring-websocket | Websocket 和 SockJS 实现 |
 | Test | spring-test | 测试模拟对象和测试框架 |
+
+## Jar包
+&emsp;&emsp;Jar包下载：
+[https://repo.spring.io/ui/#/artifacts/browse/tree/General/libs-release-local/org/springframework/spring](https://repo.spring.io/ui/#/artifacts/browse/tree/General/libs-release-local/org/springframework/spring)
+[https://repo.spring.io/ui/native/libs-release-local/org/springframework/spring/](https://repo.spring.io/ui/native/libs-release-local/org/springframework/spring/)
+
+* spring-core
+* spring-context
+* spring-beans
+* spring-expression
+* spring-jcl
+* junit
+* hamcrest-core

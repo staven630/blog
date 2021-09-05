@@ -1,5 +1,6 @@
+- [Awesome Java Weekly](https://java.libhunt.com/newsletter/archive)
+- [Top Java Blogs](https://www.topjavablogs.com/news)
 - [tech-weekly: 「小马哥技术周报」](https://github.com/mercyblitz/tech-weekly)
-- [Java Weekly - Thoughts on Java](https://thoughts-on-java.org/java-weekly/)
+- [Java Weekly - Thoughts on Java](https://thorben-janssen.com/category/weekly/)
 - [Java Weekly](http://www.baeldung.com/category/weekly-review/)
 - [Java Weekly](https://www.thoughts-on-java.org/java-weekly/)
-- [Microservice Weekly](https://us9.campaign-archive.com/home/?u=510d6f81b948a39e0d9c32ec3&id=7b3139f09c)

@@ -1,7 +1,9 @@
+- [baseclass](https://www.baseclass.io/newsletter/contents)
 - [TechBridge 技术共笔部落格](https://blog.techbridge.cc/)
 - [编程狂人](http://www.tuicool.com/mags)
 - [Morning Cup of Coding](https://us18.campaign-archive.com/home/?u=ab0f46cf302c0ed836e0bf0ad&id=56b5f64c5f)
 - [码农周刊](http://weekly.manong.io/issues/)
+- [软件测试周刊](https://softwaretestingweekly.com/issues)
 - [TestingCatalog：Android 应用和 beta 测试](https://www.getrevue.co/profile/testingcatalog)
 - [DS 周刊：数据结构和算法](https://www.getrevue.co/profile/srebalaji)
 - [SF Data Weekly | Revue](http://weekly.sfdata.io/)
@@ -22,17 +24,6 @@
 
 ---
 
-## 运维
-
-- [Docker Weekly Archives - Docker Blog](https://www.docker.com/blog/docker-weekly-archives/)
-- [Kubernetes Development](http://lwkd.info/)
-- [DevOps'ish](https://devopsish.com/)
-- [DevOps Dispatch](https://devopsdispatch.com/issues)
-- [WebOps Weekly Archives](https://webopsweekly.com/issues)
-- [Serverless Status](https://serverless.email/issues)
-
----
-
 ## 深度学习
 
 - [Deep Learning Weekly | Revue](http://digest.deeplearningweekly.com/issues/)
@@ -41,6 +32,7 @@
 
 # 其他
 
+- [apisecurity](https://apisecurity.io/)
 - [Microservice Weekly](https://us9.campaign-archive.com/home/?u=510d6f81b948a39e0d9c32ec3&id=7b3139f09c)
 - [API Developer Weekly](https://us2.campaign-archive.com/home/?u=5005148108dfbac726f74e31e&id=239e48d26e)
 - [Software Lead Weekly](http://softwareleadweekly.com/issues/)

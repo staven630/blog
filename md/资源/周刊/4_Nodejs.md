@@ -1,6 +1,7 @@
 - [Node Weekly](https://nodeweekly.com/issues)
 - [Node.js Daily](https://news.risingstack.com/)
 - [npm Weekly](https://medium.com/npm-inc/tagged/npm-weekly)
+- [Next.js News](https://nextjsnews.com/)
 - [RisingStack Engineering](https://blog.risingstack.com/)
 - [Awesome Node.js Newsletter](https://nodejs.libhunt.com/newsletter/archive)
 - [Node.js Monthly Newsletter](https://us14.campaign-archive.com/home/?u=c7c2e114a827812354112c23b&id=f006b61f29)
