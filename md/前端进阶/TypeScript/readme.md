@@ -26,3 +26,5 @@ Decorators
 混入
 三斜线指令
 构建与编译
+
+- [防止重复的 TypeScript 代码](https://javascript.plainenglish.io/dry-your-wet-typescript-code-e3c777b3daf9)

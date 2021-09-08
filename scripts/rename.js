@@ -56,4 +56,4 @@ function remove(dirPath, limit) {
   }
 }
 
-add('../md/前端可视化/Cesium/2_Cesium Entity实体', 13);
+multiple('../md/Java框架/Spring/2_Spring Bean', 1);

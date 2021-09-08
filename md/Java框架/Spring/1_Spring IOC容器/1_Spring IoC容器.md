@@ -1,10 +1,10 @@
 &emsp;&emsp;IoC 容器是 Spring 最核心的概念和内容，用于统一创建和管理依赖对象。它替代了传统的 new 方式初始化对象，通过读取在 XML 文件中配置的 Bean 定义，自动创建并管理容器的 Bean 实例及其生命周期；最重要的是可以在 Bean 的定义中进行依赖对象的配置，并根据依赖配置自动注入相关依赖，降低对象之间的耦合程度，以达到解耦的效果。
 
-&emsp;&emsp;BeanFactory 和 ApplicationContext 是 Spring 进行对象管理的两个主要接口。
+&emsp;&emsp;在创建 Bean 之前，首先需要创建 IOC 容器。Spring 提供了 IOC 容器的两种实现方式：BeanFactory 和 ApplicationCotext。
 
-## BeanFactory
+### BeanFactory
 
-&emsp;&emsp;BeanFactory 是基础类型的 IoC 容器，提供了完整的 IoC 服务支持。它主要负责初始化各种 Bean，并调用它们的生命周期方法。
+&emsp;&emsp;BeanFactory 是 IoC 容器的基本实现，是 Spring 内部使用的接口，是面向 Spring 本身的。
 
 &emsp;&emsp;BeanFactory 接口有多个实现类，最常见的是 org.springframework.beans.factory.xml.XmlBeanFactory，它是根据 XML 配置文件中的定义装配 Bean 的。
 
@@ -14,7 +14,7 @@ BeanFactory beanFactory = new XmlBeanFactory(
 );
 ```
 
-## ApplicationContext
+### ApplicationContext
 
 &emsp;&emsp;ApplicationContext 是 Spring IoC 容器的另一个重要接口，被称为应用上下文。继承自 BeanFactory，同时也提供了一些新的高级功能：
 
