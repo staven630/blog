@@ -27,5 +27,6 @@ module.exports = {
   '插件': 'plugins',
   '工具': 'tools',
   "算法与数据结构": 'algorithm',
-  "设计模式": "design-pattern"
+  "设计模式": "design-pattern",
+  "开发资源": "dev"
 }

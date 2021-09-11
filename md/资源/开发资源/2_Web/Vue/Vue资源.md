@@ -14,7 +14,3 @@
 - [vue-next-admin](https://github.com/lyt-Top/vue-next-admin)
 - [vue-admin-beautiful-pro](https://github.com/chuzhixin/vue-admin-beautiful-pro)
 - [vue-vben-admin](https://github.com/anncwb/vue-vben-admin)
-
-# 文章
-
-- [Better Component Composition in VueJS](https://itnext.io/better-composition-in-vue-fd35b9fe9c79)

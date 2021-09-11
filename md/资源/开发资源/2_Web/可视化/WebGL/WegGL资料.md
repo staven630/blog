@@ -1,5 +1,3 @@
-## WegGL
-
 - [学习 WebGL](http://learnwebgl.brown37.net/)
 - [tutorialspoint WebGL](https://www.tutorialspoint.com/webgl/index.htm)
 - [MDN WebGL 入门](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)

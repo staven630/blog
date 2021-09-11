@@ -1,0 +1,1 @@
+- [Better Component Composition in VueJS](https://itnext.io/better-composition-in-vue-fd35b9fe9c79)
