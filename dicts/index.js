@@ -7,10 +7,14 @@ module.exports = {
   '前端可视化': 'visual',
   '前端规范': 'web-standard',
   '前端资源': 'web-resources',
-  '基础类型': 'basic-type',
+  '基本数据类型': 'base-type',
   'UI框架': 'ui-framework',
   "Cesium": "cesium",
   '理论工具': 'thoery',
+
+  '基础': 'base',
+  '进阶': 'advanced',
+  '高级': 'senior',
 
   'Java基础': 'java-base',
   'Java框架': 'java-framework',

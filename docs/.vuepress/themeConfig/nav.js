@@ -10,7 +10,7 @@ module.exports = [
     "text": "前端进阶", 
     "items": [
      
-      { "text": "TypeScipt", "link": "/web-advanced/typescript/basic-type"}
+      { "text": "TypeScipt", "link": "/web-advanced/typescript/base/base-type"}
     ] 
   },
   { 
