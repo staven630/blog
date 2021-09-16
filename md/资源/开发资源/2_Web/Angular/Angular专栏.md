@@ -6,3 +6,4 @@
 - [Kevin Kreuzer](https://kevinkreuzer.medium.com/)
 - [Jim Armstrong](https://medium.com/@theAlgorithmist)
 - [RayRay](https://blog.byrayray.dev/)
+- [Redin Gaetan](https://medium.com/@redin.gaetan)

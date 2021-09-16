@@ -16,13 +16,13 @@
 - [TypeScript - 知乎](https://www.zhihu.com/topic/19766226/hot)
 - [TypeScript - Quora](https://www.quora.com/topic/TypeScript-programming-language)
 - [TypeScript - SitePen](https://www.sitepen.com/blog/category/typescript)
+- [TypeScript Evolution](https://mariusschulz.com/blog/series/typescript-evolution)
+
+# 专题
+
 - [Typescript 初心者手札](https://ithelp.ithome.com.tw/users/20120053/ironman/2273)
 - [为什么世界需要 Typescript](https://ithelp.ithome.com.tw/users/20119139/ironman/2121)
 - [让 TypeScript 成为你全端开发的 ACE](https://ithelp.ithome.com.tw/users/20120614/ironman/2685)
-- [TypeScript Evolution](https://mariusschulz.com/blog/series/typescript-evolution)
-
-#
-
 - [TypeScript 从零实现 axios](https://blog.poetries.top/ts-axios/)
 - [三十天路边赌场上线了](https://ithelp.ithome.com.tw/users/20109783/ironman/2287)
 

@@ -1,0 +1,1 @@
+- [如何使用 Husky 通过 Git Hooks 自动化代码模式](https://medium.com/dextra-digital/como-automatizar-padr%C3%B5es-de-c%C3%B3digo-com-git-hooks-usando-husky-a066f4e60b0e)
